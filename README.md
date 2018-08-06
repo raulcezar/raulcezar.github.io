@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Raul
 
 Possui graduação em Ciência da Computação, mestrado em Inteligência Artificial e doutorado em Inteligência Artificial aplicada em Robótica pela Universidade Federal de Uberlândia (UFU) com períodos de sanduíche nas instituições Institut National des Sciences Appliquées (INSA) de Rouen na França e Carnegie Mellon University (CMU) nos EUA. Atualmente é coordenador da Divisão de Sistemas no Centro de Tecnologia da Informação (CTI) da UFU e professor na Faculdade
 [Lattes](http://lattes.cnpq.br/9271560213358590)
