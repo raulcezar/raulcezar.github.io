@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/simple.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="img/img.png" data-background-size="initial">
+					<div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 2px; height: auto;">
+						<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; color: rgb(151, 192, 36);">
+							<h1><strong><span style="font-size:0.9em">Desenvolvimento para Aplicativos Móveis</span></strong></h1>
+						</div>
+					</div>
+					<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 106px; top: 502px;">
+						<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+							<p style="text-align:left"><span style="font-size:0.7em">Prof. Dr. <strong>Raul</strong>cézar<strong> </strong>Alves</span></p>
+						</div>
+					</div>
+					<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 106px; top: 528px;">
+						<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+							<p style="text-align:left"><span style="font-size:0.5em"><em>raulcezar@gmail.com</em></span></p>
+						</div>
+					</div>
+				</section>
+				<section>Slide 1</section>
+				<section>Slide 2</section>
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>reveal.js</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/simple.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #a7c73f"><b>Desenvolvimento para Aplicativos Móveis</b></font>
+					<center><img src="img/1.png" style="all:unset;"></center>
+					<span><font size="6"><b>Aula 01</b></font></span><br>
+					<span><font size="4">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4">raulcezar@gmail.com</font>
+				</section>
+				<section>
+					<h3><b>O que é um dispositivo móvel?</b></h3><br>
+					<img src="img/2.jpg" style="all:unset;float: right;width: 40%">
+					<span style="display:block;">É um dispositivo de computação portátil, pequeno, geralmente equipado com um método de entrada e uma tela de exibição.</span>
+				</section>
+				<section>
+					<h3><b>O que é um aplicativo móvel?</b></h3><br>
+					<img src="img/3.jpg" style="all:unset;float: right;width: 40%">
+					<ul style="display:block;">
+						<li>É um sistema desenvolvido para ser instalado em um dispositivo eletrônico móvel.</li>
+						<li>Aplicativos são normalmente conhecidos como "app", abreviatura para "application", aplicação em inglês.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Qual a diferença entre um aplicativo e um site responsivo?</b></h3><br>
+					<img src="img/4.jpg" style="all:unset;float: right;width: 20%">					
+					<ul style="display:block;">
+						<span><b>Site Responsivo</b></span>
+						<li>Tenta ajustar site para as dimensões do dispositivo (nem sempre consegue).</li>
+						<li>Requer conexão com a internet para acessar.</li>
+						<li>Funcionalidades limitadas.</li>
+						<li>Fácil criação, basta conhecimento em HTML, CSS e JS.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Qual a diferença entre um aplicativo e um site responsivo?</b></h3><br>
+					<img src="img/4.jpg" style="all:unset;float: right;width: 20%">					
+					<ul style="display:block;">
+						<span><b>Aplicativo Nativo</b></span>
+						<li>Acessível off-line após instalação.</li>
+						<li>Uso de recursos, como: câmera, GPS, giroscópio, etc; possibilitando a criação de sistemas mais complexos.</li>
+						<li>Iteração mais rápida e visualmente mais adaptável ao dispositivo.</li>
+						<li>Desenvolvimento complexo pois depende do SO do dispositivo.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>E aplicativos híbridos?</b></h3><br>
+					<img src="img/5.png" style="all:unset;float: right;width: 40%">					
+					<ul style="display:block;">
+						<li>Desenvolvidos em HTML, mas, ao contrário de sites responsivos, são executados em um contêiner nativo.</li>
+						<li>Podem acessar recursos do dispositivo, tais como câmera, giroscópio, acelerômetro, etc; mas muitas vezes não se tem o mesmo desempenho.</li>
+						<li>Compilam aplicações em HTML, CSS, JS em forma de Apps para diversas plataformas.</li>
+						<li>ionic é o mais utilizado hoje.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Todos os dados necessários para meu App ficam no dispositivo?</b></h3><br>
+					<img src="img/6.png" style="all:unset;float: right;width: 40%">					
+					<ul style="display:block;">
+						<li>Ou seja, meu App funciona totalmente sem internet?</li>
+						<li>Depende da sua aplicação.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Todos os dados necessários para meu App ficam no dispositivo?</b></h3><br>
+					As vezes são necessários sistemas de backend.<br>
+					<img src="img/7.jpg" style="all:unset;width: 100%">					
+				</section>
+				<section>
+					<h3><b>Cada dia mais móvel...</b></h3><br>
+					Hoje, carregamos um poder computacional em nosso bolso maior do que tínhamos no mundo inteiro na década de 60.<br>
+					<img src="img/8.jpg" style="all:unset;width: 100%">					
+				</section>
+				<section>
+					<h3><b>Plataformas nativas mais utilizadas</b></h3><br>
+					Android e iOS.<br>
+					<img src="img/9.jpg" style="all:unset;width: 80%">					
+				</section>
+				<section>Slide 2</section>
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
