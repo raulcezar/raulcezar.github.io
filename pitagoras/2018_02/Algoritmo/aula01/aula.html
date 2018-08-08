@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Algoritmos e Técnicas de Programação</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/moon.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #f16625"><b>Algoritmos e Técnicas de Programação</b></font><br><br>
+					<center><img src="img/0.png" style="all:unset;width: 40%"></center>
+					<span><font size="6" color="#a4dadd"><b>Aula 01</b></font></span><br>
+					<span><font size="4" color="#a4dadd">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4" color="#a4dadd">raulcezar@gmail.com</font>
+				</section>
+				<section>
+					<h3><b>Computador</b></h3><br>
+					<img src="img/1.png" style="all:unset;float: right;width: 40%">
+					<ul style="display:block;">
+						<li>Máquina que manipula dados a partir de uma lista de instruções.</li>
+						<li>Podem ser mecânicos (analógicos) ou eletrônicos (digitais).</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>História dos Computadores</b></h3><br>
+					<ul>
+						<span><b>1ª Geração (1930-1958)</b></span>
+						<li>circuitos eletrônicos a válvulas</li>
+						<li>milissegundos</li>
+					</ul><br>
+					<img src="img/2.png" style="all:unset;float:middle;width: 45%">
+					<img src="img/3.png" style="all:unset;float:middle;width: 25%">
+				</section>
+				<section>
+					<h3><b>História dos Computadores</b></h3><br>
+					<ul>
+						<span><b>2ª Geração (1955-1965)</b></span>
+						<li>circuitos eletrônicos transistorizados</li>
+						<li>microssegundos</li>
+					</ul><br>
+					<img src="img/4.jpg" style="all:unset;float:middle;width: 30%">
+					<img src="img/5.png" style="all:unset;float:middle;width: 25%">
+				</section>
+				<section>
+					<h3><b>História dos Computadores</b></h3><br>
+					<ul>
+						<span><b>3ª Geração (1965-1980)</b></span>
+						<li>circuitos integrados</li>
+						<li>nanossegundos</li>
+					</ul><br>
+					<img src="img/6.png" style="all:unset;float:middle;width: 25%">
+				</section>
+				<section>
+					<h3><b>História dos Computadores</b></h3><br>
+					<ul>
+						<span><b>4ª Geração (1980-...)</b></span>
+						<li>tecnologia de firmware, integração em escalas superiores, chips</li>
+						<li>picossegundos</li>
+					</ul><br>
+					<img src="img/7.png" style="all:unset;float:middle;width: 30%">
+				</section>
+				<section>
+					<h3><b>História dos Computadores</b></h3><br>
+					<ul>
+						<li><b>Válvula:</b> dispositivo que conduz a corrente elétrica em um só sentido;</li>
+						<li><b>Transistor:</b> amplificador de cristal, inventado nos EUA em 1948, para substituir a válvula;</li>
+						<li><b>Circuito Integrado:</b> circuito eletrônico constituído de elevado número de componentes alocados em um chip de centímetros/milímetros quadrados;</li>
+						<li><b>Chip:</b> “pastilha” de semicondutor (exemplo silício), onde se monta um circuito integrado;</li>
+						<li><b>Firmware:</b> programa armazenado em chip.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Primeiro Computador</b></h3>
+					<span><b>Eniac</b></span><br>
+					<iframe width="600" height="480" src="https://www.youtube.com/embed/k4oGI_dNaPc?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</section>
+				<section>
+					<h3><b>Eventos que impulsionaram a Computação</b></h3>
+					<span><b>Navegação marítima e astronomia</b></span><br>
+					<img src="img/8.jpg" style="all:unset;float:middle;width: 30%"><br>
+					<span><b>Segunda Guerra Mundial (Alan Turing)</b></span><br>
+					<img src="img/9.jpg" style="all:unset;float:middle;width: 15%">
+					<iframe style="all:unset;float:middle;width: 60;" src="https://www.youtube.com/embed/YIkKbMcJL_4?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</section>
+				<section>
+					<h3><b>Supercomputadores</b></h3>
+					<ul>
+						<li>computador com altíssima velocidade de processamento e grande capacidade de memória</li>
+						<li>utilizado em: física quântica, mecânica, meteorologia, modelagem molecular, simulação nuclear</li>
+					</ul><br>
+					<img src="img/10.jpg" style="all:unset;float:middle;width:60%">
+				</section>
+				<section>
+					<h3><b>Computação Quântica</b></h3>
+					<ul>
+						<li>arquitetura diferente da usual (Von Neumann)</li>
+						<li>necessidade para processar IA</li>
+						<li>um "objeto" pode tomar diferentes estados ao mesmo tempo, ou seja, é possível verificar todas as possibilidades de resultado de uma função no mesmo instante (quantum)</li>
+					</ul><br>
+					<img src="img/11.jpg" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Funcionamento e estrutura básica de um computador</b></h3>
+					<ul>
+						<li><b>Entrada:</b> leitura de dados</li>
+						<li><b>Processamento:</b>  operações lógicas e aritméticas</li>
+						<li><b>Saída:</b> escrita ou gravação de resultados</li>
+					</ul><br>
+					<img src="img/15.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Modelo de Von Neumann</b></h3>
+					<ul>
+						<li>Matemático americano que propôs, em 1940, o modelo base utilizado nos computadores atuais.</li>
+						<li>O elemento Processador segue as instruções (algoritmo) armazenadas em uma memória, para ler canais de entrada, enviar comandos de saída e alterar as informações contidas em uma memória de dados.</li>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Modelo de Von Neumann</b></h3>
+					<ul>
+						<span><b>Unidade Central de Processamento (UCP)</b></span>
+						<li>cérebro do computador, conhecido como CPU</li>
+						<li>local onde os dados são processados</li>
+						<li>função de interpretar e executar os programas</li>
+						<li>coordena e executa as instruções e as operações aritméticas e lógicas</li>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Modelo de Von Neumann</b></h3>
+					<ul>
+						<span><b>Unidade de Controle (UC)</b></span>
+						<li>gerencia todos os recursos do computador</li>
+						<li>coordena e controla todas as atividades realizadas em uma sequência lógica e sincronizada</li>
+						<li>recebe instruções de programas, decodifica e dirige os componentes para que possam ser executados</li>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Modelo de Von Neumann</b></h3>
+					<ul>
+						<span><b>Unidade Aritmética e Lógica (UAL)</b></span>
+						<li>responsável pela execução de todas as operações aritméticas e lógicas realizadas durante o processamento</li>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Modelo de Von Neumann</b></h3>
+					<ul>
+						<span><b>Memória Principal</b></span>
+						<li>componente responsável pelo armazenamento de dados e instruções (eletrônico e mais rápido)</li>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Modelo de Von Neumann</b></h3>
+					<ul>
+						<span><b>Memória ROM (Ready Only Memory)</b></span>
+						<li>apenas leitura</li>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Modelo de Von Neumann</b></h3>
+					<ul>
+						<span><b>Memória RAM (Random Access Memory)</b></span>
+						<li>memória temporária que armazena dados e programas durante a execução e que é apagada quando se desliga o computador</li>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Modelo de Von Neumann</b></h3>
+					<ul>
+						<span><b>Memória Cache</b></span>
+						<li>memória fisicamente integrada no processador, cuja finalidade é melhorar a performance do mesmo, reduzindo o tempo gasto com a transferência</li>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Modelo de Von Neumann</b></h3>
+					<ul>
+						<span><b>Memória Secundária</b></span>
+						<li>constituída de componentes mecânicos, eletrônicos, magnéticos, para armazenar permanentemente dados e programas (HD, Pendrive, cartão de memória, etc)</li>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Modelo de Von Neumann</b></h3>
+					<ul>
+						<span><b>Unidade de Entrada</b></span>
+						<li>unidades através das quais dados e instruções são fornecidos ao computador</li>
+						<li>exemplo: leitoras ópticas, teclados, mouses, scanners, unidades leitoras de discos, etc</li>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Modelo de Von Neumann</b></h3>
+					<ul>
+						<span><b>Unidade de Saída</b></span>
+						<li>unidades através das quais o computador fornece os resultados de um programa para que sejam mostrados ou armazenados</li>
+						<li>exemplos: impressoras, unidades gravadores de disco, monitores de vídeo, entre outros</li>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Modelo de Von Neumann</b></h3>
+					<ul>
+						<span><b>Exemplo: programa que lê dois valores e mostra o resultado da soma</b></span>
+						<li>Entrar com 2 valores (Unidade de Entrada)</li>
+						<li>Somar (UCP e Memória Principal)</li>
+						<li>Mostrar Valores (Unidade de Saída)</li>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Hardware</b></h3>
+					<ul>
+						<li>conjunto dos constituintes físicos do computador</li>
+						<li>exemplo: teclado, mouse, impressoras, gabinetes, entre outros</li>
+					</ul><br>
+					<img src="img/12.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Software</b></h3>
+					<ul>
+						<li>conjunto de todos os programas de um computador</li>
+						<li>exemplo: word, excel, browsers</li>
+					</ul><br>
+					<img src="img/13.png" style="all:unset;float:middle;width:50%">
+				</section>
+				<section>
+					<h3><b>Sistema Operacional</b></h3>
+					<ul>
+						<li>programa que gerencia o funcionamento do computador, abstraindo principalmente o hardware</li>
+						<li>exemplo: windows, linux, mac os</li>
+					</ul><br>
+					<img src="img/14.png" style="all:unset;float:middle;width:50%">
+				</section>
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
