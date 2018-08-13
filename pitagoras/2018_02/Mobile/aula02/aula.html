@@ -1,0 +1,461 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Desenvolvimento para Dispositivos Móveis</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/simple.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #a7c73f"><b>Desenvolvimento para Dispositivos Móveis</b></font>
+					<center><img src="img/1.png" style="all:unset;"></center>
+					<span><font size="6"><b>Aula 02</b></font></span><br>
+					<span><font size="4">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4">raulcezar@gmail.com</font>
+				</section>
+				<section>
+					<h3><b>Android Studio</b></h3>
+					<img src="img/2.jpg" style="all:unset;float: right;width: 50%">
+					<ul style="display:block;">
+						<li>Ambiente de Desenvolvimento Integrado (IDE) para desenvolvimento Android</li>
+						<li>substituiu o Android Development Tools (ADT), plugin para Eclipse IDE</li>
+						<li>é uma plataforma inteira dedicada para Android, melhor que um simples plugin</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Estrutura de um Projeto Android</b></h3>
+					<span>Projeto é uma árvore de diretórios e arquivos, como abrir um EXPLORER no windows</span><br>
+					<img src="img/9.png" style="all:unset;width:35%">					
+				</section>
+				<section>
+					<h3><b>Estrutura de um Projeto Android</b></h3>
+					<span><b>app</b> é a raiz do projeto</span><br>
+					<img src="img/10.png" style="all:unset;width:35%">					
+				</section>
+				<section>
+					<h3><b>diretório manifests</b></h3>
+					<ul><span><b>AndroidManifest.xml</b></span>
+						<li>arquivo de configuração do aplicativo</li>
+						<li>define permissões de acesso aos recursos do dispositivo, como: câmera, gps, giroscópio, etc</li>
+						<li>cadastra as funcionalidades (activities) do app</li>
+					</ul>
+					<img src="img/11.png" style="all:unset;width:85%">					
+				</section>
+				<section>
+					<h3><b>funcionalidades de um app</b></h3>
+					<ul>
+						<li>cada funcionalidade/tela de seu app é um par de layout (<b>visão</b>) e activity (<b>controle</b>)
+</li>
+						<li><b>visão: </b>é aquilo que o usuário vê, interface gráfica. Geralmente escritos em XML e salvos na pasta <b>res</b></li>
+						<li><b>controle: </b>programa que se liga a visão para buscar, processar, e gerar resultados. Escritos em Java e salvos na pasta <b>java</b>
+</li>
+					</ul>
+					<img src="img/12.png" style="all:unset;width:45%">					
+				</section>
+				<section>
+					<h3><b>funcionalidades de um app</b></h3>
+					<ul><span>Padrão: activity_<b><i>funcionalidade</i></b>.xml e <b><i>Funcionalidade</i></b>Activity.java</span>
+						<li>Por exemplo, uma funcionalidade de <b>Login</b> teria:</li>
+						<li>visão: activity_<b><i>login</i></b>.xml</li>
+						<li>controle: <b><i>Login</i></b>Activity.java</li>
+					</ul>
+					<img src="img/13.png" style="all:unset;width:45%">					
+				</section>
+				<section>
+					<h3><b>funcionalidades de um app</b></h3>
+					<ul><span><b>Ligação entre Controle-Visão</b></span>
+						<li>exemplo: MainActivity.java</li>
+						<li>na classe Java é descrito qual layout ela controla</li>
+					</ul>
+					<img src="img/14.png" style="all:unset;width:100%">					
+				</section>
+				<section>
+					<h3><b>funcionalidades de um app</b></h3>
+					<ul><span><b>Ligação entre Controle-Visão</b></span>
+						<li>exemplo: activity_main.xml</li>
+						<li>no xml da tela também se referencia a classe, é possivel ter um preview da tela</li>
+					</ul>
+					<img src="img/15.png" style="all:unset;width:75%">				
+				</section>
+				<section>
+					<h3><b>diretório java</b></h3>					
+					<img src="img/16.png" style="all:unset;float:right;width:60%">		
+					<ul style="display:block;">
+						<li>pacote para classes de controle (activities)</li>
+						<li>pacotes para classes de teste</li>
+					</ul>			
+				</section>
+				<section>
+					<h3><b>diretório res (interface gráfcica)</b></h3>
+					<img src="img/17.png" style="all:unset;float:right;width:35%">	
+					<ul style="display:block;"></span>
+						<li><b>drawable: </b>arquivos de mídia, imagens, icones, etc</li>
+						<li><b>layout: </b>arquivos XML de visão dos controles</li>
+						<li><b>mipmap: </b>arquivos de lançador do aplicativo para diferentes dispositivos</li>
+						<li><b>values: </b>arquivos de constantes para cores, textos e estilos</li>
+					</ul>				
+				</section>
+				<section>
+					<h3><b>Acompanhamento de IMC Familiar</b></h3>
+					<span>Layout e Funcionamento</span><br>
+					<img src="img/8.png" style="all:unset;width:100%">					
+				</section>
+				<section>
+					<h3><b>Criando um novo App</b></h3>
+					<span>File >> New >> Project</span><br>
+					<img src="img/3.png" style="all:unset;width:100%">					
+				</section>
+				<section>
+					<h3><b>Criando um novo App</b></h3>
+					<span>Nome e pacote de armazenamento para o Projeto</span><br>
+					<img src="img/4.png" style="all:unset;width:85%">					
+				</section>
+				<section>
+					<h3><b>Criando um novo App</b></h3>
+					<span>Selecionar Dispositívos e API, traz a mais compatível</span><br>
+					<img src="img/5.png" style="all:unset;width:75%">					
+				</section>
+				<section>
+					<h3><b>Criando um novo App</b></h3>
+					<span>Selecionar Template, neste caso vazio</span><br>
+					<img src="img/6.png" style="all:unset;width:70%">					
+				</section>
+				<section>
+					<h3><b>Criando um novo App</b></h3>
+					<span>Nomear a Activity principal, deixar "main"</span><br>
+					<img src="img/7.png" style="all:unset;width:75%">				
+				</section>
+				<section>
+					<h3><b>Funcionalidade - Formulário (Main)</b></h3>
+					<span><b>Visão: activity_main.xml</b></span><br>
+					<img src="img/19.png" style="all:unset;width:100%">				
+				</section>
+				<section>
+					<h3><b>Visão</b></h3>
+					<img src="img/22.png" style="all:unset;width:95%">				
+				</section>	
+				<section>
+					<h3><b>Visão</b></h3>
+					<span><b>Text:</b> campos de texto</span><br>
+					<img src="img/25.png" style="all:unset;width:40%">				
+				</section>	
+				<section>
+					<h3><b>Visão</b></h3>
+					<span><b>Buttons:</b> botões</span><br>
+					<img src="img/26.png" style="all:unset;width:40%">				
+				</section>	
+				<section>
+					<h3><b>Visão</b></h3>
+					<span><b>Widgets:</b> ferramentas especiais</span><br>
+					<img src="img/27.png" style="all:unset;width:40%">				
+				</section>	
+				<section>
+					<h3><b>Visão</b></h3>
+					<span><b>Layout (View Group):</b> distribuição de elementos na tela</span><br>
+					<img src="img/28.png" style="all:unset;width:40%">				
+				</section>
+				<section>
+					<h3><b>Visão</b></h3>
+					<span><b>Relative Layout: </b>posiciona um elemento novo com base na posição de um elemento já disponível na tela</span><br>
+					<img src="img/23.png" style="all:unset;width:30%">				
+				</section>
+				<section>
+					<h3><b>Visão</b></h3>
+					<span><b>Linear Layout: </b>posiciona elementos em sequência, em uma única direção (android:orientation)</span><br>
+					<img src="img/24.png" style="all:unset;width:60%">				
+				</section>		
+				<section>
+					<h3><b>Visão</b></h3>
+					<span><b>Containers:</b> podem funcionar como layouts, mas possuem recursos interativos</span><br>
+					<img src="img/29.png" style="all:unset;width:32%">				
+				</section>
+				<section>
+					<h3><b>Visão</b></h3>
+					<span><b>Google:</b> recursos específicos da Google, como Maps</span><br>
+					<img src="img/30.png" style="all:unset;width:40%">				
+				</section>	
+				<section>
+					<h3><b>Visão</b></h3>
+					<span><b>Legacy:</b> recursos antigos</span><br>
+					<img src="img/31.png" style="all:unset;width:40%">				
+				</section>					
+				<section>
+					<h3><b>Funcionalidade - Formulário (Main)</b></h3>
+					<span><b>Visão: activity_main.xml</b></span><br>
+					<img src="img/19.png" style="all:unset;width:100%">				
+				</section>			
+				<section>
+					<h3><b>Funcionalidade - Formulário (Main)</b></h3>
+					<span><b>Visão: activity_main.xml</b></span><br>
+					<ul><span>Mudar layout para um elemento embaixo do outro:</span>
+						<li>setar LinearLayout</li>						
+						<li>setar orientação para vertical</li>
+					</ul>
+					<img src="img/21.png" style="all:unset;width:80%">				
+				</section>		
+				<section>
+					<h3><b>Funcionalidade - Formulário (Main)</b></h3>
+					<span><b>Visão: activity_main.xml</b></span><br>
+					<span>Adicionar elementos da tela: textos, campos e botões</span>
+					<img src="img/32.png" style="all:unset;width:27%">				
+				</section>	
+				<section>
+					<h3><b>Funcionalidade - Formulário (Main)</b></h3>
+					<span><b>Visão: activity_main.xml</b></span><br>
+					<span>Textos constantes ficam em strings.xml</span>
+					<pre><code>
+&lt;resources&gt;
+	&lt;string name=&quot;app_name&quot;&gt;IMC&lt;/string&gt;
+	&lt;string name=&quot;imc&quot;&gt;IMC&lt;/string&gt;
+	&lt;string name=&quot;classificacao&quot;&gt;Classifica&ccedil;&atilde;o&lt;/string&gt;
+	&lt;string name=&quot;nome&quot;&gt;*Nome:&lt;/string&gt;
+	&lt;string name=&quot;peso&quot;&gt;*Peso:&lt;/string&gt;
+	&lt;string name=&quot;altura&quot;&gt;*Altura:&lt;/string&gt;
+&lt;/resources&gt;
+					</code></pre>				
+				</section>
+				<section>
+					<h3><b>Funcionalidade - Formulário (Main)</b></h3>
+					<span><b>Visão: activity_main.xml</b></span><br>	
+					<span>Código</span><br>			
+				  <pre><code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:orientation=&quot;vertical&quot;
+    tools:context=&quot;.MainActivity&quot;&gt;
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_gravity=&quot;center&quot;
+        android:textSize=&quot;25sp&quot;
+        android:layout_marginTop=&quot;10dp&quot;
+        android:text=&quot;@string/imc&quot;
+        /&gt;
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_gravity=&quot;center&quot;
+        android:inputType=&quot;numberSigned&quot;
+        android:text=&quot;@string/imc&quot;
+    /&gt;
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_gravity=&quot;center&quot;
+        android:textSize=&quot;25sp&quot;
+        android:text=&quot;@string/classificacao&quot;
+    /&gt;
+    &lt;TextView
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;@string/nome&quot;
+        android:layout_marginTop=&quot;10dp&quot;
+        android:layout_marginLeft=&quot;10dp&quot;
+        /&gt;
+
+    &lt;EditText
+        android:id=&quot;@+id/nome&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:inputType=&quot;text&quot;
+        android:layout_marginLeft=&quot;10dp&quot;
+        /&gt;
+    &lt;TextView
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;@string/peso&quot;
+        android:layout_marginTop=&quot;10dp&quot;
+        android:layout_marginLeft=&quot;10dp&quot;
+        /&gt;
+
+    &lt;EditText
+        android:id=&quot;@+id/peso&quot;
+        android:layout_width=&quot;100dp&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:inputType=&quot;text&quot;
+        android:layout_marginLeft=&quot;10dp&quot;
+        /&gt;
+    &lt;TextView
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;@string/altura&quot;
+        android:layout_marginTop=&quot;10dp&quot;
+        android:layout_marginLeft=&quot;10dp&quot;
+        /&gt;
+    &lt;EditText
+        android:id=&quot;@+id/altura&quot;
+        android:layout_width=&quot;100dp&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:inputType=&quot;text&quot;
+        android:layout_marginLeft=&quot;10dp&quot;
+        /&gt;
+    &lt;Button
+        android:id=&quot;@+id/calcular&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_gravity=&quot;center&quot;
+        android:layout_margin=&quot;10dp&quot;
+        android:text=&quot;Calcular&quot;/&gt;
+&lt;/LinearLayout&gt;
+				  </code></pre>
+				</section>		
+				<section>
+					<h3><b>Funcionalidade - Formulário (Main)</b></h3>
+					<span><b>Visão: activity_main.xml</b></span><br>
+					<span>Design Preview</span><br>
+					<img src="img/36.png" style="all:unset;width:40%">				
+				</section>		
+				<section>
+					<h3><b>Funcionalidade - Formulário (Main)</b></h3>
+					<span><b>Visão: activity_main.xml</b></span><br>
+					<span>Trocar cores primárias do App em colors.xml</span>
+					<pre><code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;resources&gt;
+    &lt;color name=&quot;colorPrimary&quot;&gt;#18941B&lt;/color&gt;
+    &lt;color name=&quot;colorPrimaryDark&quot;&gt;#20C624&lt;/color&gt;
+    &lt;color name=&quot;colorAccent&quot;&gt;#BBEE00&lt;/color&gt;
+&lt;/resources&gt;
+					</code></pre>				
+				</section>					
+				<section>
+					<h3><b>Funcionalidade - Formulário (Main)</b></h3>
+					<span><b>Visão: activity_main.xml</b></span><br>
+					<span>Trocar cores dos elementos com as cores definidas</span>
+					<pre><code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:orientation=&quot;vertical&quot;
+    tools:context=&quot;.MainActivity&quot;&gt;
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_gravity=&quot;center&quot;
+        android:textSize=&quot;25sp&quot;
+        android:layout_marginTop=&quot;10dp&quot;
+        android:text=&quot;@string/imc&quot;
+        android:textColor=&quot;@color/colorPrimary&quot;
+        /&gt;
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_gravity=&quot;center&quot;
+        android:inputType=&quot;numberSigned&quot;
+        android:text=&quot;@string/imc&quot;
+        android:textColor=&quot;@color/colorAccent&quot;
+    /&gt;
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_gravity=&quot;center&quot;
+        android:textSize=&quot;25sp&quot;
+        android:text=&quot;@string/classificacao&quot;
+        android:textColor=&quot;@color/colorPrimaryDark&quot;
+    /&gt;
+    &lt;TextView
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;@string/nome&quot;
+        android:layout_marginTop=&quot;10dp&quot;
+        android:layout_marginLeft=&quot;10dp&quot;
+        android:textColor=&quot;@color/colorAccent&quot;
+        /&gt;
+    &lt;EditText
+        android:id=&quot;@+id/nome&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:inputType=&quot;text&quot;
+        android:layout_marginLeft=&quot;10dp&quot;
+        android:textColor=&quot;@color/colorPrimary&quot;
+        /&gt;
+    &lt;TextView
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;@string/peso&quot;
+        android:layout_marginTop=&quot;10dp&quot;
+        android:layout_marginLeft=&quot;10dp&quot;
+        android:textColor=&quot;@color/colorAccent&quot;
+        /&gt;
+    &lt;EditText
+        android:id=&quot;@+id/peso&quot;
+        android:layout_width=&quot;100dp&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:inputType=&quot;text&quot;
+        android:layout_marginLeft=&quot;10dp&quot;
+        android:textColor=&quot;@color/colorPrimary&quot;
+        /&gt;
+    &lt;TextView
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;@string/altura&quot;
+        android:layout_marginTop=&quot;10dp&quot;
+        android:layout_marginLeft=&quot;10dp&quot;
+        android:textColor=&quot;@color/colorAccent&quot;
+        /&gt;
+    &lt;EditText
+        android:id=&quot;@+id/altura&quot;
+        android:layout_width=&quot;100dp&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:inputType=&quot;text&quot;
+        android:layout_marginLeft=&quot;10dp&quot;
+        android:textColor=&quot;@color/colorPrimary&quot;
+        /&gt;
+    &lt;Button
+        android:id=&quot;@+id/calcular&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_gravity=&quot;center&quot;
+        android:layout_margin=&quot;10dp&quot;
+        android:text=&quot;Calcular&quot;
+        android:background=&quot;@color/colorPrimary&quot;
+        android:textColor=&quot;#FFF&quot;/&gt;
+&lt;/LinearLayout&gt;
+					</code></pre>				
+				</section>	
+				<section>
+					<h3><b>Funcionalidade - Formulário (Main)</b></h3>
+					<span><b>Visão: activity_main.xml</b></span><br>
+					<span>Design Preview</span><br>
+					<img src="img/37.png" style="all:unset;width:40%">				
+				</section>
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

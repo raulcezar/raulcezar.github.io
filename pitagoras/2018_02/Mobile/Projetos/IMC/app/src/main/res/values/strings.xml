@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IMC</string>
+    <string name="imc">IMC</string>
+    <string name="classificacao">Classificação</string>
+    <string name="nome">*Nome:</string>
+    <string name="peso">*Peso:</string>
+    <string name="altura">*Altura:</string>
+</resources>
