@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Desenvolvimento para Dispositivos Móveis</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/simple.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #a7c73f"><b>Desenvolvimento para Dispositivos Móveis</b></font>
+					<center><img src="img/1.png" style="all:unset;"></center>
+					<span><font size="6"><b>Aula 03</b></font></span><br>
+					<span><font size="4">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4">raulcezar@gmail.com</font>
+				</section>
+				<section>
+					<h3><b>Ligação Visão e Controle</b></h3>
+					<ul style="display:block;">
+						<span><b>Padrão ViewHolder:</b></span>
+						<li>mapeia elementos da visão (botões, campos de texto, etc)  para elementos do controle (atributos da classe java)</li>
+						<li>classe java passa a controlar a tela, podendo recuperar dados que o usuário digitou nos campos, executar métodos quando ele clicar em um botão, e colocar novos textos nos campos da tela como forma de retorno</li>
+						<li>é necessário dar um <b>ID</b> único para cada elemento da tela</li>
+					</ul>
+				</section>	
+				<section>
+					<h3><b>Ligação Visão e Controle</b></h3>
+					<span style="display:block;">Mapeamento</span><br>
+					<img src="img/4.png" style="all:unset;float: right;width: 100%">
+				</section>	
+				<section>
+					<h3><b>Ligação Visão e Controle</b></h3>
+					<span style="display:block;">Controlando elementos da visão a partir do controle</span><br>
+					<img src="img/5.png" style="all:unset;float: right;width: 100%">
+				</section>
+				<section>
+					<h3><b>Ligação Visão e Controle</b></h3>
+					<img src="img/3.png" style="all:unset;float: right;width: 60%">
+					<span style="display:block;"><b>Primeiro passo:</b> dar um identificador único (sem repetição na tela) com <b>@+id/NOME</b> para cada elemento que se deseja controlar</span><br>
+				</section>	
+				<section>
+					<h3><b>Ligação Visão e Controle</b></h3>
+					<img src="img/2.png" style="all:unset;float: right;width: 60%">
+					<span style="display:block;"><b>Primeiro passo:</b> dar um identificador único (sem repetição na tela) com <b>@+id/NOME</b> para cada elemento que se deseja controlar</span><br>
+				</section>	
+				<section>
+					<h3><b>Ligação Visão e Controle</b></h3>
+					<span><b>Segundo passo:</b> criar um ViewHolder para esses elementos na clase de controle <b>MainActivity</b>, e fazer a ligação com os elementos de visão no método <b>onCreate</b></span><br>
+					<img src="img/6.png" style="all:unset;width: 65%">
+				</section>	
+				<section>
+					<h3><b>Acionar um botão</b></h3>					
+					<span>acrescentar um evento de clique no botão (activity_main.xml), e dizer qual método da classe de controle será executado, neste caso o Calcular</span>
+					<img src="img/7.png" style="all:unset;width: 60%">
+				</section>	
+				<section>
+					<h3><b>Acionar um botão</b></h3>					
+					<span>acrescentar método Calcular na classe MainActivity que troca o texto do campo <b>imc</b></span>
+					<img src="img/8.png" style="all:unset;width: 60%">
+				</section>	
+				<section>
+					<h3><b>Acionar um botão</b></h3>					
+					<span>Ao clicar no botão, o método Calcular da classe java troca o texto do campo <b>imc</b></span><br>
+					<img src="img/9.png" style="all:unset;width: 50%">
+				</section>	
+				<section>
+					<h3><b>Método para calcular IMC</b></h3>					
+					<ul>
+						<li>parâmetros: altura e peso</li>
+						<li>retorno: peso/(altura*altura)</li>
+					</ul>
+					<img src="img/10.png" style="all:unset;width: 60%">
+				</section>	
+				<section>
+					<h3><b>Método para classificar o IMC</b></h3>					
+					<table>
+						<tr><td><b>IMC</b></td><td><b>Classificação</b></td></tr>
+						<tr><td>Abaixo de 17</td><td>Muito abaixo do peso</td></tr>
+						<tr><td>Entre 17 e 18,49</td><td>Abaixo do peso</td></tr>
+						<tr><td>Entre 18,5 e 24,99</td><td>Peso normal</td></tr>
+						<tr><td>Entre 25 e 29,99</td><td>Acima do peso</td></tr>
+						<tr><td>Entre 30 e 34,99</td><td>Obesidade I</td></tr>
+						<tr><td>Entre 35 e 39,99</td><td>Obesidade II (severa)</td></tr>
+						<tr><td>Acima de 40</td><td>Obesidade III (mórbida</td></tr>
+					</table>
+				</section>	
+				<section>
+					<h3><b>Método para classificar o IMC</b></h3>					
+					<ul>
+						<li>parâmetro: imc</li>
+						<li>retorno: texto de classificação</li>
+					</ul><br>
+					<img src="img/11.png" style="all:unset;width: 50%">
+				</section>	
+				<section>
+					<h3><b>Modificar método "Calcular" do botão</b></h3>
+					<ul style="display:block;">
+						<li>recuperar valores de peso e altura da tela</li>
+						<li>calcular imc a partir desses valores</li>
+						<li>classificar imc calculado</li>
+						<li>apresentar imc e classificação nos devidos campos da tela</li>
+					</ul>
+				</section>		
+				<section>
+					<h3><b>Modificar método "Calcular" do botão</b></h3>
+   				    <img src="img/12.png" style="all:unset;width: 50%">
+				</section>		
+				<section>
+					<h3><b>Modificar método "Calcular" do botão</b></h3>
+   				    <img src="img/13.png" style="all:unset;width: 80%">
+				</section>	
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

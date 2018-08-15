@@ -17,6 +17,7 @@
         android:textColor="@color/colorPrimary"
         />
     <TextView
+        android:id="@+id/imc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -25,6 +26,7 @@
         android:textColor="@color/colorAccent"
     />
     <TextView
+        android:id="@+id/classificacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -88,5 +90,6 @@
         android:layout_margin="10dp"
         android:text="Calcular"
         android:background="@color/colorPrimary"
-        android:textColor="#FFF"/>
+        android:textColor="#FFF"
+        android:onClick="Calcular"/>
 </LinearLayout>
