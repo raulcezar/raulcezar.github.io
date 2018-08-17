@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Algoritmos e Técnicas de Programação</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/moon.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #f16625"><b>Algoritmos e Técnicas de Programação</b></font><br><br>
+					<center><img src="img/0.png" style="all:unset;width: 40%"></center>
+					<span><font size="6" color="#a4dadd"><b>Aula 02</b></font></span><br>
+					<span><font size="4" color="#a4dadd">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4" color="#a4dadd">raulcezar@gmail.com</font>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul>
+						<li>Imagine que você está saindo de casa para a faculdade e de repente percebe que o pneu do veículo está furado.</li>
+						<li>Trocar um pneu pode ser uma tarefa difícil.</li>
+					</ul>
+					 <video style="all:unset;width: 50%"controls>
+						  <source src="img/trocarPneu.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video> 
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Descreva os passos necessários para a troca desse pneu</b></span>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Descreva os passos necessários para a troca desse pneu</b></span>
+						<li>Desparafusar a roda.</li>
+						<li>Levantar o carro.</li>
+						<li>Remover a roda.</li>
+						<li>Colocar o estepe.</li>
+						<li>Parafusar a roda.</li>
+						<li>Abaixar o carro.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Descreva os passos necessários para a troca desse pneu</b></span>
+						<li>Desparafusar a roda.</li>
+						<li>Levantar o carro.</li>
+						<li>Remover a roda.</li>
+						<li>Colocar o estepe.</li>
+						<li>Parafusar a roda.</li>
+						<li>Abaixar o carro.</li>
+					</ul><br>
+					<span><b>Denominamos essa sequência de instruções (passos) de algoritmo.</b></span>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Definições</b></span>
+						<li>"Seqüência básica de instruções que conduzem a solução de um problema."</li>
+						<li>"É uma descrição das etapas de resolução de um problema ou a indicação ordenada de uma seqüência de ações bem definidas."</li>
+						<li>"O algoritmo é, em sua forma mais simplificada, a maneira mais elementar de se descrever uma lógica."</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<span><b>Computador não tem senso próprio! Deve receber instruções explícitas (algoritmos).</b></span><br>
+					<ul><span><b>Um algoritmo correto deve possuir 3 qualidades:</b></span>
+						<li>Cada passo do algoritmo deve ser uma instrução que possa ser realizada.</li>
+						<li>A ordem dos passos deve ser precisamente determinada.</li>
+						<li>O algoritmo deve ter fim.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Método para a construção de algoritmo:</b></span>
+						<li>Compreender completamente o problema a ser resolvido.</li>
+						<li>Definir os dados de entrada.</li>
+						<li>Definir o processamento (cálculos que serão efetuados).</li>
+						<li>Definir os dados de saída.</li>
+						<li>Construir o algoritmo utilizando um dos tipos a seguir.</li>
+						<li>Testar o algoritmo realizando simulações.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Tipos de Algoritmos:</b></span>
+						<li>Descrição Narrativa.</li>
+						<li>Fluxograma</li>
+						<li>Pseudocódigo ou Portugol</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Descrição Narrativa</b></span>
+						<li>Consiste em analisar o enunciado do problema e escrever, em uma linguagem natural, os passos a serem seguidos para sua resolução.</li>
+						<li><b>Vantagem:</b> não é necessário nenhum conceito novo, pois a língua já é conhecida.</li>
+						<li><b>Desvantagem:</b> a língua natural abre espaço para várias interpretações, o que dificultará a transcrição do algoritmo para programa.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Descrição Narrativa: Exemplo - multiplicar 2 números.</b></span>
+						<li><b>Passo 1:</b> Receber os dois números que serão multiplicados.</li>
+						<li><b>Passo 2:</b> Multiplicar os números.</li>
+						<li><b>Passo 3: Mostrar o resultado obtido na multiplicação.</b></li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Fluxograma</b></span>
+						<li>Consiste em analisar o enunciado problema e escrever, utilizando símbolos gráficos predefinidos, os passos a serem seguidos para sua resolução.</li>
+						<li><b>Vantagem:</b> o entendimento de elementos gráficos é mais simples que o entendimento de textos.</li>
+						<li><b>Desvantagem:</b> é necessário aprender a simbologia dos fluxogramas, além disso, o algoritmo resultante não apresenta muitos detalhes, dificultando a transcrição para programa.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<span><b>Fluxograma</b></span><br>
+					<img src="img/1.png" style="all:unset;width: 100%">
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<span><b>Fluxograma: Exemplo - multiplicar 2 números.</b></span><br>
+					<img src="img/2.png" style="all:unset;width: 100%">
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Pseudocódigo ou Portugol</b></span>
+						<li>Consiste em analisar o enunciado problema e escrever, por meio de regras predefinidas, os passos a serem seguidos para sua resolução.</li>
+						<li><b>Vantagem:</b> a passagem do algoritmo para qualquer linguagem de programação é quase imediata, bastando conhecer as palavras reservadas dessa linguagem para sua resolução.</li>
+						<li><b>Desvantagem:</b> é necessário aprender as regras do pseudocódigo.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<span><b>Pseudocódigo ou Portugol: Exemplo - multiplicar 2 números.</b></span><br>
+					<code>
+						<pre>
+ALGORITMO
+	DECLARE N1, N2, M NUMÉRICO
+	ESCREVA “Digite dois números”
+	LEIA N1, N2
+	M &larr; N1 * N2
+	ESCREVA “Multiplicação = ”, M
+FIM_ALGORITMO
+						</pre>
+					</code>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Dados</b></span>
+						<li>Valores, informações a serem processadas pelo computador.</li>
+						<li>Dados de entrada são aqueles fornecidos através de uma leitura.</li>
+						<li>Dados de sáida são aqueles gerados pelo programa.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Tipos de Dados</b></span>
+						<li>Números inteiros/reais: 1,2; 2.3 ...</li>
+						<li>Valores lógicos: true/false; 1/0 ...</li>
+						<li>Valores alfanuméricos: cadeia de caracteres 'ABC#'...</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Variáveis</b></span>
+						<li>Entidade que armazena dados provisoriamente.</li>
+						<li>Devem possuir: nome (rótulo), valor (dado) e tipo.</li>
+					</ul><br>
+					<img src="img/4.png" style="all:unset;width:40%">
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Maneiras de dar valor à uma variável</b></span>
+						<li>Atribuição: próprio progama coloca o valor dentro da variável.</li>
+						<li>Leitura: valor dado por uma unidade de entrada (ex: valor digitado pelo usuário).</li>
+					</ul><br>
+					<img src="img/5.png" style="all:unset;width:80%">
+				</section>
+				<section>
+					<h3><b>Algoritmo</b></h3>
+					<ul><span><b>Exercícios</b></span>
+						<li>1.</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
