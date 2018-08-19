@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Desenvolvimento para Dispositivos Móveis</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/simple.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #a7c73f"><b>Desenvolvimento para Dispositivos Móveis</b></font>
+					<center><img src="img/1.png" style="all:unset;"></center>
+					<span><font size="6"><b>Aula 05</b></font></span><br>
+					<span><font size="4">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4">raulcezar@gmail.com</font>
+				</section>
+				<section>
+					<h3><b>Criar no funcionalidade para listar IMC das pessoas salvas no SharedPreferences</b></h3>
+					<img src="img/2.png" style="all:unset;width:30%">
+				</section>	
+				<section>
+					<h3><b>Criar nova activity</b></h3>
+					<img src="img/3.png" style="all:unset;width: 80%">
+				</section>	
+				<section>
+					<h3><b>Criar nova activity</b></h3>
+					<img src="img/4.png" style="all:unset;width: 75%">
+				</section>	
+				<section>
+					<h3><b>Criar nova activity</b></h3>
+					<img src="img/5.png" style="all:unset;width: 100%">
+				</section>	
+				<section>
+					<h3><b>Modificar activity_listagem.xml</b></h3>
+					<ul>
+						<li>aplicar mesmo layout da activity_main.xml</li>
+						<li>deixar apenas o texto "IMC da Família"</li>
+					</ul>
+					<pre><code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+android:layout_width=&quot;match_parent&quot;
+android:layout_height=&quot;match_parent&quot;
+android:orientation=&quot;vertical&quot;
+android:background=&quot;@drawable/fundo&quot;
+tools:context=&quot;.ListagemActivity&quot;&gt;
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_gravity=&quot;center&quot;
+        android:textSize=&quot;25sp&quot;
+        android:layout_marginTop=&quot;10dp&quot;
+        android:text=&quot;@string/imc_da_familia&quot;
+        android:textColor=&quot;@color/colorPrimary&quot;
+        /&gt;
+&lt;/LinearLayout&gt;
+					</code></pre>					
+				</section>					
+				<section>
+					<h3><b>Navegação entre activities</b></h3>
+					<ul>
+						<li>crie um método chamado Listar na classe <b>MainActivity</b> que aciona a classe ListagemActivity, fazendo assim a navegação da tela Main para a tela Listagem</li>
+						<li>deve ser utilizado o recurso Intent que registra a intenção de fazer a interação de uma activity com outra
+						<li>crie mais um botão na tela <b>activity_main.xml</b> que ao ser clicado chame o método Listar</li>
+						<li>ajuste a distância entre os elementos da tela, caso não estejam cabendo</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Navegação entre activities</b></h3>
+					<img src="img/6.png" style="all:unset;width: 100%">
+				</section>	
+				<section>
+					<h3><b>Navegação entre activities</b></h3>
+					<img src="img/7.png" style="all:unset;width: 55%">
+				</section>	
+				<section>
+					<h3><b>Navegação entre activities</b></h3>
+					<img src="img/8.png" style="all:unset;width:80%">
+				</section>	
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

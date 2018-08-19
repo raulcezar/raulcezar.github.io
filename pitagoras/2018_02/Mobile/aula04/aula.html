@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Desenvolvimento para Dispositivos Móveis</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/simple.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #a7c73f"><b>Desenvolvimento para Dispositivos Móveis</b></font>
+					<center><img src="img/1.png" style="all:unset;"></center>
+					<span><font size="6"><b>Aula 04</b></font></span><br>
+					<span><font size="4">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4">raulcezar@gmail.com</font>
+				</section>
+				<section>
+					<h3><b>Salvando dados localmente</b></h3>
+					<img src="img/2.png" style="all:unset;float: right;width: 40%">
+					<ul style="display:block;">
+						<span><b>Shared Preferences</b></span>
+						<li>salvar dados locais</li>
+						<li>armazenar dados não voláteis, que não se alteram com frequência, como login do usuário no App</li>
+						<li>dados que devem ter disponibilidade rápida</li>
+						<li>não é indicado para armazenar grandes volumes de dados, para isso é necessário usar um bando de dados remoto</li>
+					</ul>
+				</section>	
+				<section>
+					<h3><b>Salvando dados localmente</b></h3>
+					<img src="img/3.png" style="all:unset;float: right;width: 30%">
+					<ul style="display:block;">
+						<span><b>Shared Preferences</b></span>
+						<li>armazena dados numa estrutura de hash com chave-valor (key-value)</li>
+						<li><b>key: </b>são identificadores para os dados, que não se repetem (não colidem), por exemplo, para salvar os dados de uma pesssoa o CPF poderia ser usado como key</li>
+						<li><b>value: </b> é a informação que se deseja salvar, podendo ser de vários tipos, como: int, float, Strings, booleans e sets de Strings</li>
+					</ul>
+				</section>	
+				<section>
+					<h3><b>Salvando dados localmente</b></h3>
+					<ul style="display:block;">
+						<span><b>Shared Preferences</b></span>
+						<li>para criar uma SharedPreferences é necessário passar um nome e um modo de funcionamento</li>
+						<li>o nome define uma área de armazenamento dentro do App, como um esquema de banco de dados</li>
+						<li>existem vários modos, o que utilizaremos é o privado que permite apenas nosso App ler e escrever</li>
+						<li>uma vez criado, é possível armazenar dados na estrutura através de um PUT passando "key","value"</li>
+						<li>para recuperar um dado basta utilizar o método GET passando "key" para se recuperar o "value"</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Salvando dados localmente</b></h3>
+					<ul style="display:block;">
+						<span><b>Criar classe para gerenciar nosso SharedPreference</b></span>
+						<li>utilizaremos SharedePreferences para armazenar dados de IMC de cada pessoa da família</li>
+						<li>key: a chave será o nome da pessoa, digitada no campo Nome do App</li>
+						<li>value: será armazenado o peso, altura, imc e classificação da pessoa</li>
+					</ul>
+				</section>	
+				<section>
+					<h3><b>Salvando dados localmente</b></h3>
+					<ul style="display:block;">
+						<span><b>Criar classe para gerenciar nosso SharedPreference</b></span>
+						<li>Botão direito na pasta java >> New >> Java Class</li>
+					</ul><br>
+					<img src="img/4.png" style="all:unset;width: 100%">	
+				</section>	
+				<section>
+					<h3><b>Salvando dados localmente</b></h3>
+					<ul style="display:block;">
+						<span><b>Criar classe para gerenciar nosso SharedPreference</b></span>
+						<li>dar nome de "ArmazenamentoIMC" para a classe e salvar em um novo pacote .utils</li>
+					</ul>
+					<img src="img/5.png" style="all:unset;width:65%">	
+				</section>	
+				<section>
+					<h3><b>Salvando dados localmente</b></h3>
+					<ul style="display:block;">
+						<span><b>Criar classe para gerenciar nosso SharedPreference</b></span>
+						<li>instanciando um SharedPreferences</li>
+					</ul>
+					<img src="img/6.png" style="all:unset;width:100%">	
+				</section>	
+				<section>
+					<h3><b>Salvando dados localmente</b></h3>
+					<ul style="display:block;">
+						<span><b>Criar classe para gerenciar nosso SharedPreference</b></span>
+						<li>salvando key,value no SharedPreferences criado</li>
+					</ul>
+					<img src="img/7.png" style="all:unset;width:100%">	
+				</section>
+				<section>
+					<h3><b>Salvando dados localmente</b></h3>
+					<ul style="display:block;">
+						<span><b>Criar classe para gerenciar nosso SharedPreference</b></span>
+						<li>buscando todos os dados do SharedPreferences</li>
+					</ul>
+					<img src="img/8.png" style="all:unset;width:100%">	
+				</section>	
+				<section>
+					<h3><b>Salvando dados localmente</b></h3>
+					<ul style="display:block;">
+						<span><b>Classe PessoaIMC</b></span>
+						<li>os dados que vamos armazenar no nosso SharedPreferences são referentes ao IMC de uma pessoa: nome, peso, altura, imc e classificação</li>
+						<li>para armazenar esses dados de forma organizada, vamos criar mais uma classe dentro do pacote .utils que encapsula essas informações</li>
+						<li>essa classe será chamada de PessoaIMC e terá os atributos: String nome, Double peso, Double altura, Double imc, String classificacao</li>
+						<li>crie também um construtor com todos esses campos</li>
+					</ul>	
+				</section>
+				<section>
+					<h3><b>Salvando dados localmente</b></h3>
+					<img src="img/9.png" style="all:unset;width:100%">	
+				</section>	
+				<section>
+					<h3><b>Serialização</b></h3>
+					<ul style="display:block;">
+						<span><b>Armazenamento no SharedPreferences</b></span>
+						<li>como vimos, SharedPreferences armazena <b>key</b> e <b>value</b></li>
+						<li>vamos usar o nome da pessoa como <b>key</b></li>
+						<li><b>value</b> será um objeto da classe PessoaIMC com todos os dados dentro</li>
+						<li>porém, SharedPreferences não armazena objetos do tipo PessoaIMC como value, apenas tipos como: int, float, Strings, booleans e sets de Strings</li>
+						<li>para isso, vamos serializar o objeto e transformá-lo em um String JSON</li>
+					</ul>
+				</section>	
+				<section>
+					<h3><b>Serialização</b></h3>
+					<img src="img/10.png" style="all:unset;width:100%">	
+				</section>	
+				<section>
+					<h3><b>Serialização</b></h3>
+					<img src="img/11.png" style="all:unset;width:100%">	
+				</section>	
+				<section>
+					<h3><b>Serialização</b></h3>
+					<ul style="display:block;">
+						<span><b>Adicionando biblioteca para serialização</b></span>
+						<li>abra o arquivo Gradle Scripts >> build.gradle (Module: app)</li>
+						<li>adicione <b>implementation 'com.google.code.gson:gson:2.8.2'</b> nas dependências</li>
+						<li>salve e compile para forçar o download</li>
+						<li>após isso, será possível utilizar métodos de serialização e deserialização nas classes java</li>
+					</ul>
+				</section>	
+				<section>
+					<h3><b>Serialização</b></h3>
+					<img src="img/12.png" style="all:unset;width:100%">	
+				</section>	
+				<section>
+					<h3><b>Salvando dados</b></h3>
+					<ul style="display:block;">
+						<span><b>Modificar MainActivity.java</b></span>
+						<li>declarar ArmazenamentoIMC para utilizar métodos de salvar e buscar dados da SharedPreferences</li>
+						<li>declarar Gson para serializar e deserializar dados da SharedPreferences</li>
+						<li>no método <b>onCreate</b> inicialize ArmazenamentoIMC passando this como contexto</li>
+					</ul>
+				</section>						
+				<section>
+					<h3><b>Serialização</b></h3>
+					<img src="img/13.png" style="all:unset;width:100%">	
+				</section>	
+				<section>
+					<h3><b>Salvando dados</b></h3>
+					<ul style="display:block;">
+						<span><b>Modificar MainActivity.java</b></span>
+						<li>criar método Salvar que faça:</li>
+						<li>1) recuperar todos os dados da tela: nome, peso, altura, imc e classificação</li>
+						<li>2) instanciar um objeto da classe PessoaIMC e colocar todos esses dados dentro</li>
+						<li>3) serializar esse objeto para uma String JSON</li>
+						<li>4) salvar na SharedPreferences</li>
+						<li>5) limpar os campos</li>
+					</ul>
+				</section>						
+				<section>
+					<h3><b>Serialização</b></h3>
+					<img src="img/14.png" style="all:unset;width:95%">	
+				</section>	
+				<section>
+					<h3><b>Salvando dados</b></h3>
+					<img src="img/15.png" style="all:unset;float:right;width:50%">	
+					<ul style="display:block;">
+						<span><b>Modificar activity_main.xml</b></span>
+						<li>adicionar mais um botão na tela que chama o método Salvar</li>
+					</ul>
+				</section>		
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
