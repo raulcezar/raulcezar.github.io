@@ -2,7 +2,7 @@
 #include<stdlib.h>
 int main()
 {
-    float x;
+    int x;
     printf("Digite um numero \n");
     scanf("%f",&x);
     printf("parte inteira %3.0f \n",x);
