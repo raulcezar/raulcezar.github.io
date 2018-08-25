@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Algoritmos e Técnicas de Programação</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/moon.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #f16625"><b>Algoritmos e Técnicas de Programação</b></font><br><br>
+					<center><img src="img/0.png" style="all:unset;width: 40%"></center>
+					<span><font size="6" color="#a4dadd"><b>Aula 03</b></font></span><br>
+					<span><font size="4" color="#a4dadd">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4" color="#a4dadd">raulcezar@gmail.com</font>
+				</section>
+				<section>
+					<h3><b>Tipos de dados em C/C++</b></h3>
+					<ul><span><b>Mais comuns</b></span>
+						<li><b>int: </b>para números inteiros</li>
+						<li><b>float: </b>para números reais</li>
+						<li><b>char: </b>para um caracter de texto</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Tipos de dados em C/C++</b></h3>
+					<ul><span><b>Não existem</b></span>
+						<li><b>boolean (Verdadeiro/False): </b>é utilizado int, sendo 0 para falso e 1 (ou qualquer outro número diferente de 0) para verdadeiro</li>
+						<li><b>cadeia/sequência de caracteres: </b>de forma nativa, não existe tipo STRING, é utilizado um vetor de caracters para guardar palavras com tamanho maior que 1.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Tipos de dados em C/C++</b></h3>
+					<ul><span><b>Exemplos</b></span>
+						<li>float X;</li>
+						<li>char SEXO;</li>
+						<li>char NOME[40];</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Tipos de dados em C/C++</b></h3>
+					<font size="5">
+						<table>
+							<tr><td>Tipo</td><td>Memória (bytes)</td><td>Intervalo (CPU 32Bits)</td><td>Formato</td></tr>
+							<tr><td>short int</td><td>2</td><td>-32.768 a 32.767</td><td>%hd</td></tr>
+							<tr><td>unsigned short int</td><td>2</td><td>0 a 65.535</td><td>%hu</td></tr>
+							<tr><td>unsigned int</td><td>4</td><td>0 a 4.294.967.295</td><td>%u</td></tr>
+							<tr><td>int</td><td>4</td><td>-2.147.483.648 a 2.147.483.647</td><td>%d</td></tr>
+							<tr><td>long int</td><td>4</td><td>-2.147.483.648 a 2.147.483.647</td><td>%ld</td></tr>
+							<tr><td>unsigned long int</td><td>4</td><td>0 a 4.294.967.295</td><td>%lu</td></tr>
+							<tr><td>long long int</td><td>8 </td><td>-(2^63) a (2^63)-1</td><td>%lld</td></tr>
+							<tr><td>unsigned long long int</td><td>8</td><td>0 a 18.446.744.073.709.551.615</td><td>%llu</td></tr>
+							<tr><td>signed char</td><td>1</td><td>-128 a 127</td><td>%c</td></tr>
+							<tr><td>unsigned char</td><td>1</td><td>0 a 255</td><td>%c</td></tr>
+							<tr><td>float</td><td>4</td><td></td><td>%f</td></tr>
+							<tr><td>double</td><td>8</td><td></td><td>%lf</td></tr>
+							<tr><td>long double</td><td>12</td><td></td><td>%Lf</td></tr>
+						</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Tipos de dados em C/C++</b></h3>
+					<ul><span><b>Exceder tamanho:</b></span>
+						<li>valor é circular</li>
+						<li>quando uma variável recebe um valor maior que a capacidade do tamanho de seu tipo, ele estoura e se começa a contar do restante</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Tipos de dados em C/C++</b></h3>
+					<img src="img/1.png" style="all:unset;width:100%">
+				</section>
+				<section>
+					<h3><b>Exercício</b></h3>
+					<ul><span><b>Quanto valem no exemplo anterior?</b></span>
+						<li>X: </li>
+						<li>Y: </li>
+						<li>Z: </li>
+						<li>W: </li>
+					</ul>
+				</section>
+
+				<section>
+					<h3><b>Exercício</b></h3>
+					<span><b>Execute o código abaixo e veja o resultado do exemplo</b></span>
+					<br>
+					<pre>
+						<code>
+#include&lt;stdio.h&gt;
+int main()
+{
+    short int X = 32767;
+    short int Y = X + 1;
+    short int Z = Y + 32768;
+    int W = X + 1;
+    printf("%hd %hd %hd %d ",X,Y,Z,W);
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3><b>Comando de atribuição em C/C++</b></h3>
+					<ul><span><b>utilizado para atribuir valor ou operação para uma variável, por meio do símbolo =, como:</b></span>
+						<li>X = 4;</li>
+						<li>SEXO = 'F';</li>
+						<li>Y = X + 2.5;</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Comando de atribuição em C/C++</b></h3>
+					<ul>
+						<li>um caracter é representado entre apóstofros ('), como:</li>
+						<li>SEXO = 'F';</li>
+						<li>Já cadeias de caractares ficam entre aspas ("). Para armazenar uma cadeia de caracteres em uma variável utiliza-se o comando strcpy(variável,"valor"), ao invés da atribuição com =, e deve-se incluir a biblioteca string.h.</li>
+						<li>strcpy(NOME,"Joao");</li>
+						<li>todas as linhas de comando em C devem ser finalizadas com ;</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Comando de atribuição em C/C++</b></h3>
+					Exemplos errado e correto:
+					<pre>
+						<code>
+char linguagem[20];
+linguagem = "linguagem C"; /* ilegal em C */
+strcpy( linguagem, "linguagem C"); /* legal */
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3><b>Exercício</b></h3>
+					<ul>Faça um programa que:
+						<li>possua uma variável inicializada com seu nome completo, atribuindo o valor com strcpy</li>
+						<li>imprima seu conteúdo com printf("%s", ...)</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Exercício</b></h3>
+					<ul>Faça um programa que:
+						<li>possua uma variável inicializada com seu nome completo, atribuindo o valor com strcpy</li>
+						<li>imprima seu conteúdo com printf("%s", ...)</li>
+					</ul>
+					<pre>
+						<code>
+#include&lt;stdio.h&gt;
+int main()
+{
+    char nome[50];
+    strcpy(nome, "Raulcezar Alves");
+    printf("%s",nome);
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3><b>Comandos de Entrada em C/C++</b></h3>
+					<ul><span><b>são utilizados para receber dados digitados pelo usuário e salvar em variáveis</b></span>
+						<li><b>cin: </b> cin >> X (armazena os caracteres em X até encotrar um espaço em branco)</li>
+						<li><b>gets: </b> gets(X) (armazena todos os caracteres digitados em X)</li>
+						<li><b>scanf: </b> scanf(%FORMATO,&X) (armazena todos os caracteres digitados em X, dado o formato como visto na tabela de tipos)</li>
+					</ul><br>
+					<br>Utilizaremos preferencialmente scanf<br>
+				</section>
+				<section>
+					<h3><b>Comandos de Saída em C/C++</b></h3>
+					<ul><span><b>são utilizados para mostras dados na tela</b></span>
+						<li><b>cout: </b> cout << X</li>
+						<li><b>printf: </b> printf("%FORMATO",X)</li>
+					</ul><br>
+					<br>Utilizaremos preferencialmente printf<br>
+				</section>	
+				<section>
+					<h3><b>Exercício</b></h3>
+					<ul><span><b>Digite o número float 123.45 e o armazene em uma variável. Depois, o imprima das seguintes formas:</b></span>
+						<li>mostrando apenas a parte inteira com 3 casas</li>
+						<li>mostrando a parte inteira com 3 casas e mais 2 decimais</li>
+					</ul>
+				</section>		
+				<section>
+					<h3><b>Exercício</b></h3>
+					<ul><span><b>Digite o número float 123.45 e o armazene em uma variável. Depois, o imprima das seguintes formas:</b></span>
+						<li>mostrando apenas a parte inteira com 3 casas</li>
+						<li>mostrando a parte inteira com 3 casas e mais 2 decimais</li>
+					</ul>
+					<pre>
+						<code>
+#include&lt;stdio.h&gt;
+int main()
+{
+    float x;
+    printf("Digite um numero \n");
+    scanf("%f",&x);
+    printf("parte inteira %3.0f \n",x);
+    printf("parte inteira e decimais %3.2f \n",x);
+    return 0;
+}
+						</code>
+					</pre>
+				</section>	
+				<section>
+					<h3><b>Comentários em C/C++</b></h3>
+					<ul><span><b>documentar código, ignorado pelo compilador</b></span>
+						<li>// comentário de uma linha</li>
+						<li>/* ... */ comentário em bloco para múltiplas linhas</li>
+					</ul>
+					<pre>
+						<code>
+#include&lt;stdio.h&gt;
+int main()
+{
+    int x,y,z;
+    //atribuir valores
+    x=2;
+    y=3;
+    /*
+      abaixo x e y sao somados
+      o resultado eh armazenado em z
+    */
+    z=x+y;
+    return 0;
+}
+						</code>
+					</pre>
+				</section>				
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
