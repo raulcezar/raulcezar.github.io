@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1534983694 source:c:\users\raul\desktop\raulcezar.github.io\pitagoras\2018_02\algoritmos\aula02\exercicio01\exercicio2.c
-	<stdio.h>
-	<stdlib.h>
-
-1535226118 source:c:\users\raul\desktop\raulcezar.github.io\pitagoras\2018_02\algoritmos\aula02\exercicio01\main.c
-	<stdio.h>
-	<stdlib.h>
-

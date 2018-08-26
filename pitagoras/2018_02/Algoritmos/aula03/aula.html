@@ -231,7 +231,120 @@ int main()
 }
 						</code>
 					</pre>
+				</section>	
+				<section>
+					<h3><b>Operadores e Funções em C/C++</b></h3>
+					<span><b>Operadoers Básicos:</b></span>
+					<table>
+						<tr><td><b>Operador</b></td><td><b>Exemplo</b></td><td><b>Comentário</b></td></tr>
+						<tr><td>=</td><td>x=y</td><td>atribuição</td></tr>
+						<tr><td>+</td><td>x+y</td><td>soma de x e y</td></tr>
+						<tr><td>-</td><td>x-y</td><td>subtração de y em x</td></tr>
+						<tr><td>*</td><td>x*y</td><td>multiplicação de x por y</td></tr>
+						<tr><td>/</td><td>x/y</td><td>divisão de x por y</td></tr>
+						<tr><td>%</td><td>x%y</td><td>resto da divisão de x por y</td></tr>
+					</table>
 				</section>				
+				<section>
+					<h3><b>Exercício</b></h3>
+					<span><b>Mostre o resto da divisão de 10 por 4.</b></span>
+				</section>
+				<section>
+					<h3><b>Exercício</b></h3>
+					<span><b>Mostre o resto da divisão de 10 por 4.</b></span>
+					<pre>
+						<code>
+#include&lt;stdio.h&gt;
+int main()
+{
+    int x;
+    x = 10%4;
+    printf("%d",x);
+    return 0;
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3><b>Operadores e Funções em C/C++</b></h3>
+					<span><b>Operadoers Matemáticos de atribuição, fazem operações e já armazenam o resultado:</b></span>
+					<font size="6">
+						<table>
+							<tr><td><b>Operador</b></td><td><b>Exemplo</b></td><td><b>Comentário</b></td></tr>
+							<tr><td>+=</td><td>x+=y</td><td>equivale a x=x+y</td></tr>
+							<tr><td>-=</td><td>x-=y</td><td>equivale a x=x-y</td></tr>
+							<tr><td>*=</td><td>x*=y</td><td>equivale a x=x*y</td></tr>
+							<tr><td>/=</td><td>x/=y</td><td>equivale a x=x/y</td></tr>
+							<tr><td>%=</td><td>x%=y</td><td>equivale a x=x%y</td></tr>
+							<tr><td>++</td><td>x++</td><td>equivale a x=x+1 (incremento)</td></tr>
+							<tr><td>--</td><td>x--</td><td>equivale a x=x-1(decremeto)</td></tr>
+						</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Exercício</b></h3>
+					<span><b>Inicialize x com valor 10 e imprima seu conteúdo. Depois incremente x e mostre novamente.</b></span>
+				</section>
+				<section>
+					<h3><b>Exercício</b></h3>
+					<span><b>Inicialize x com valor 10 e imprima seu conteúdo. Depois incremente x e mostre novamente.</b></span>
+					<pre>
+						<code>							
+#include&lt;stdio.h&gt;
+int main()
+{
+    int x=10;
+    printf("%d \n",x);
+    x++;
+    printf("%d \n",x);
+    return 0;
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3><b>Operadores e Funções em C/C++</b></h3>
+					<span><b>Operadoers Lógicos, utilizados em estruturas condicionais (próximas aulas). Retorna 1 se verdadeiro e 0 se falso:</b></span>
+					<font size="6">
+						<table>
+							<tr><td><b>Operador</b></td><td><b>Exemplo</b></td><td><b>Comentário</b></td></tr>
+							<tr><td>==</td><td>x==y</td><td>x igual a y</td></tr>
+							<tr><td>!=</td><td>x!=y</td><td>x diferente de y</td></tr>
+							<tr><td><=</td><td>x&lt;=y</td><td>x menor ou igual a y</td></tr>
+							<tr><td>>=</td><td>x&gt;=y</td><td>x maior ou igual a y</td></tr>
+							<tr><td><</td><td>x&lt;y</td><td>x menor que y</td></tr>
+							<tr><td>></td><td>x&gt;y</td><td>x maior que y</td></tr>
+						</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Exercício</b></h3>
+					<span><b>Inicialize x com valor 10 e y com valor 9. Teste as operações x&gt;y, x&lt;y, x==y e x!=y, imprimindo os resultados.</b></span>
+				</section>
+				<section>
+					<h3><b>Exercício</b></h3>
+					<span><b>Inicialize x com valor 10 e y com valor 9. Teste as operações x&gt;y, x&lt;y, x==y e x!=y, imprimindo os resultados.</b></span>
+					<pre>
+						<code>							
+#include&lt;stdio.h&gt;
+int main()
+{
+    int x,y,resultado;
+    x=10;
+    y=9;
+    resultado = x&gt;y;
+    printf("%d \n",resultado);
+    resultado = x&lt;y;
+    printf("%d \n",resultado);
+    resultado = x==y;
+    printf("%d \n",resultado);
+    resultado = x!=y;
+    printf("%d \n",resultado);
+    return 0;
+}
+						</code>
+					</pre>
+				</section>	
 			</div>
 		</div>
 		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
