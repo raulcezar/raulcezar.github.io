@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Algoritmos e Técnicas de Programação</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/moon.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #f16625"><b>Algoritmos e Técnicas de Programação</b></font><br><br>
+					<center><img src="img/0.png" style="all:unset;width: 40%"></center>
+					<span><font size="6" color="#a4dadd"><b>Aula 04</b></font></span><br>
+					<span><font size="4" color="#a4dadd">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4" color="#a4dadd">raulcezar@gmail.com</font>
+				</section>
+				<section>
+					<h3><b>Trabalho 01</b></h3>
+					<ul><span><b>Resolva os próximos exercícios criando algoritmos em:</b></span>
+						<li>Narrativa</li>
+						<li>Fluxograma</li>
+						<li>Portugol</li>
+						<li>C</li>
+					</ul><br>
+					Entregar em papel (individual).
+				</section>
+				<section>
+					<h3><b>1</b></h3>
+					<ul><span><b>Faça um algoritmo que lê a quantidade de anos, meses e dias da idade de uma pessoa e retorne o total em dias apenas.</b></span>
+						<li>Entrada: ANOS MESES DIAS</li>
+						<li>Saída: TOTAL_DIAS</li>
+					</ul><br>
+					<img src="img/1.png" style="all:unset;width:20%">
+				</section>
+				<section>
+					<h3><b>2</b></h3>
+					<ul><span><b>Faça um algoritmo que calcule o custo com gasolina de uma viagem a partir da quantidade de horas viajadas (H), velociadade média durante a viagem (KM/H), consumo médio do carro (KM/L) e valor da gasolina (Valor/L).</b></span>
+						<li>Entrada: HORAS VELOCIDADE CONSUMO VALOR</li>
+						<li>Saída: CUSTO</li>
+					</ul>
+					<img src="img/2.png" style="all:unset;width:30%">
+				</section>
+				<section>
+					<h3><b>3</b></h3>
+					<ul><span><b>Faça um algoritmo que lê um valor inteiro representando um montante de dinheiro. A seguir, calcule o menor número de notas possíveis (cédulas) no qual o valor pode ser decomposto. As notas consideradas são de 100, 50, 20, 10, 5, 2 e 1. </b></span>
+						<li>Entrada: VALOR</li>
+						<li>Saída: QTDE_100 QTDE_50 QTDE_10 QTDE_5 QTDE_2 QTDE_1</li>
+					</ul>
+					<img src="img/3.png" style="all:unset;width:20%">
+				</section>
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
