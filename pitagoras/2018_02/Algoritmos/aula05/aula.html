@@ -1,0 +1,566 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Algoritmos e Técnicas de Programação</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/moon.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #f16625"><b>Algoritmos e Técnicas de Programação</b></font><br><br>
+					<center><img src="img/0.png" style="all:unset;width: 40%"></center>
+					<span><font size="6" color="#a4dadd"><b>Aula 05</b></font></span><br>
+					<span><font size="4" color="#a4dadd">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4" color="#a4dadd">raulcezar@gmail.com</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul>
+						<li>conhecida com estrutura de decisão ou seleção</li>
+						<li>executa determinado trecho de código dependendo da veracidade de uma condição</li>
+					</ul><br>
+					<img src="img/1.jpg" style="all:unset;width: 40%">
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Simples</b> (em portugol)</span>
+						<li>O <i>comando</i> só será executado se a <i>condição</i> for verdadeira.</li>
+						<li>Uma condição é uma comparação que possui dois valores possíveis: <i>verdadeiro</i> ou <i>falso</i>.</li>
+					</ul><br>
+					<img src="img/2.png" style="all:unset;width:100%">
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Simples</b> (em portugol)</span>
+						<li>Podem haver mais de um comando a ser executado.</li>
+					</ul><br>
+					<img src="img/3.png" style="all:unset;width:100%">
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Responda</b></span>
+						<li>Qual a saída do algoritmo para as entradas de X igual a -17, 0 e 18?</li>
+					</ul><br>
+					<img src="img/4.png" style="all:unset;width:100%">
+				</section>				
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composta</b> (em portugol)</span>
+						<li>Caso a condição seja verdadeira um comando será executado, e caso seja falsa outro comando será executado</li>
+					</ul><br>
+					<img src="img/5.png" style="all:unset;width:100%">
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composta</b> (em portugol)</span>
+						<li>Também podem haver mais de um comando em ambas as situações.</li>
+					</ul><br>
+					<img src="img/6.png" style="all:unset;width:100%">
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Aninhadas</b> (em portugol)</span>
+						<li>Estruturas condicionais dentro de outras.</li>
+					</ul><br>
+					<img src="img/7.png" style="all:unset;width:80%">
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Responda</b></span>
+						<li>Qual a saída do algoritmo para as entradas: a=5 b=-8, a=7 b=7 e a=18 b=30?</li>
+					</ul><br>
+					<img src="img/8.png" style="all:unset;width:100%">
+				</section>	
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Em Fluxograma</b></span>
+					</ul><br>
+					<img src="img/9.png" style="all:unset;width:100%">
+				</section>					
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício: Fluxograma</b></span>
+						<li>Faça o fluxograma de um algoritmo que lê 3 valores, determina qual o menor e imprime a resposta.</li>
+					</ul>
+				</section>				
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício: Fluxograma</b></span>
+					</ul><br>
+					<img src="img/10.png" style="all:unset;width:35%">
+				</section>				
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício: Portugol</b></span>
+						<li>Faça o pseudocódigo de um algoritmo que lê 3 valores, determina qual o menor utilizando uma variável auxiliar e imprime a resposta.</li>
+					</ul>
+				</section>				
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício: Portugol</b></span>
+					</ul><br>
+					<img src="img/11.png" style="all:unset;width:100%">
+				</section>			
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício: Portugol</b></span>
+						<li>Faça um algoritmo que lê três valores numéricos quaisquer. Coloca-os em ordem crescente e a seguir imprime esses valores.</li>
+						<li>Exemplo: ler 5 -2 7 e imprimir -2 5 7</li>
+					</ul>
+				</section>			
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício: Portugol</b></span>
+					</ul><br>
+					<img src="img/12.png" style="all:unset;width:100%">
+				</section>			
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício: Portugol</b></span>
+					</ul><br>
+					<img src="img/13.png" style="all:unset;width:90%">
+				</section>			
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício: Portugol</b></span>
+					</ul><br>
+					<img src="img/14.png" style="all:unset;width:95%">
+				</section>				
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Em C</b></span>
+					</ul><br>
+					<img src="img/15.png" style="all:unset;width:120%">
+				</section>			
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Em C</b></span>
+					</ul><br>
+					<img src="img/16.png" style="all:unset;width:120%">
+				</section>			
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Em C</b></span>
+						<li>Um bloco é representado por { ... } caso haja mais de uma linha de código.</li>
+						<li>Caso ele seja apenas de uma linha, não é necessário colocar. Mas tome cuidado com a execução.</li>
+						<li>Um bloco é executado ou não por inteiro, dependendo da condição, e o que ficar de fora será executado de qualquer forma.</li>
+					</ul>
+				</section>			
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Em C</b></span>
+					</ul><br>
+					<img src="img/17.png" style="all:unset;width:120%">
+				</section>			
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Em C</b></span>
+						<li>Importante "identar" o código para saber quais comandos estão dentro de quais estruturas.</li>
+					</ul><br>
+					<img src="img/18.png" style="all:unset;width:70%">
+				</section>		
+				<section>
+					<h3><b>Operadores e Funções em C/C++</b></h3>
+					<span><b>Operadores Lógicos, utilizados em estruturas condicionais.</b></span>
+					<font size="5">
+						<table>
+							<tr><td><b>Operador</b></td><td><b>Exemplo</b></td><td><b>Comentário</b></td></tr>
+							<tr><td>==</td><td>x==y</td><td>x igual a y</td></tr>
+							<tr><td>!=</td><td>x!=y</td><td>x diferente de y</td></tr>
+							<tr><td><=</td><td>x&lt;=y</td><td>x menor ou igual a y</td></tr>
+							<tr><td>>=</td><td>x&gt;=y</td><td>x maior ou igual a y</td></tr>
+							<tr><td><</td><td>x&lt;y</td><td>x menor que y</td></tr>
+							<tr><td>&&</td><td>condição1 && condição2</td><td> E </td></tr>
+							<tr><td>||</td><td>condição1 || condição2</td><td> OU </td></tr>
+							<tr><td>!</td><td>!condição</td><td>Negação</td></tr>
+							<tr><td>IF</td><td>if(condição)</td><td>SE</td></tr>
+							<tr><td>ELSE</td><td>else</td><td>SENÃO</td></tr>
+						</table>
+					</font>
+				</section>		
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Se o resultado das condições for VERDADEIRO o programa entra no IF, se der FALSO entra no ELSE</li>
+						<li>Lembram da Tabela da Verdade?</li>
+					</ul>
+				</section>	
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td></td><td></td><td></td><td></td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td></td><td></td><td></td><td></td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td></td><td></td><td></td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td></td><td></td><td></td><td></td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td></td><td></td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td></td><td></td><td></td><td></td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td></td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td></td><td></td><td></td><td></td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td></td><td></td><td></td><td></td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td></td><td></td><td></td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td></td><td></td><td></td><td></td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td><font color="red"><b>F</b></font></td><td></td><td></td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td></td><td></td><td></td><td></td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td></td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td></td><td></td><td></td><td></td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td></td><td></td><td></td><td></td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td><font color="red"><b>F</b></font></td><td></td><td></td><td></td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td></td><td></td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td></td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td><font color="red"><b>F</b></font></td><td></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td><font color="red"><b>F</b></font></td><td><font color="red"><b>F</b></font></td><td></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td><font color="red"><b>F</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="red"><b>F</b></font></td><td></td></tr>	
+					</table>
+					</font>
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Composição de condições</b></span>
+						<li>Dado o programa abaixo, diga se vai entrar no IF ou no ELSE.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td><font color="red"><b>F</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="red"><b>F</b></font></td><td>"entrou no ELSE"</td></tr>	
+					</table>
+					</font>
+				</section>			
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<br>Exercícios
+				</section>			
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício 01</b></span>
+						<li>Implemente em C um algoritmo que verifica se um número é positivo ou não.</li>
+					</ul><br>
+					<img src="img/21.png" style="all:unset;width:40%">
+				</section>			
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício 02</b></span>
+						<li>Implemente em C um algoritmo que verifica se um número é par ou ímpar.</li>
+						<li>Dica: resto da divisão de um número par é igual a zero (%).</li>
+					</ul><br>
+					<img src="img/22.jpg" style="all:unset;width:40%">
+				</section>					
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício 03</b></span>
+						<li>Implemente em C o algoritmo que dadas as notas de TRABALHO (0-20), PROVA_BIMESTRAL (0-30) e PROVA_FINAL (0-50), calcula o conceito da nota do aluno, sendo: A (80-100), B (70-80), C (60-70), D (50-60) e F (0-50) .</li>
+					</ul><br>
+					<img src="img/20.ico" style="all:unset;width:20%">
+				</section>			
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício 04</b></span>
+						<li>Implemente em C o algoritmo do fluxograma que encontra o menor de 3 valores.</li>
+					</ul><br>
+					<img src="img/10.png" style="all:unset;width:35%">
+				</section>		
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício 05</b></span>
+						<li>Implemente em C o algoritmo que ordena 3 valores, utilizando uma variável auxiliar.</li>
+					</ul><br>
+					<img src="img/14.png" style="all:unset;width:75%">
+				</section>
+				<section>
+					<h3><b>Estrutura Condicional</b></h3>
+					<ul><span><b>Exercício 06</b></span>
+						<li>Implemente em C o código abaixo e verifique todas as entradas do exemplo e suas saídas.</li>
+					</ul><br>
+					<img src="img/19.png" style="all:unset;width:40%"><br>
+					<font size="4">
+					<table>
+						<tr><td>A</td><td>B</td><td>C</td><td>A>B</td><td>A==C</td><td>(A>B)||(A==C)
+</td><td>Resultado</td></tr>
+						<tr><td>10</td><td>8</td><td>10</td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>10</td><td>8</td><td>9</td><td><font color="blue"><b>V</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>	
+						<tr><td>7</td><td>8</td><td>7</td><td><font color="red"><b>F</b></font></td><td><font color="blue"><b>V</b></font></td><td><font color="blue"><b>V</b></font></td><td>"entrou no IF"</td></tr>		
+						<tr><td>7</td><td>8</td><td>9</td><td><font color="red"><b>F</b></font></td><td><font color="red"><b>F</b></font></td><td><font color="red"><b>F</b></font></td><td>"entrou no ELSE"</td></tr>	
+					</table>
+					</font>
+				</section>
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
