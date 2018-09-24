@@ -126,7 +126,7 @@ public class ListagemActivity extends AppCompatActivity {
 
     public void Buscar(){
         LinearLayout listagem_layout = (LinearLayout)findViewById(R.id.listagem_layout);
-        Map<String, ?> todasPessoas = armazenamentoIMC.buscarTodos();
+        Map<String,String> todasPessoas = armazenamentoIMC.buscarTodos();
         listagem_layout.removeAllViews();
         LinearLayout.LayoutParams layoutParamsTitulo = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -147,7 +147,7 @@ public class ListagemActivity extends AppCompatActivity {
         textIMCFamilia.setText("IMC da Família");
         textIMCFamilia.setLayoutParams(layoutParamsTitulo);
         listagem_layout.addView(textIMCFamilia);
-        for (Map.Entry<String, ?> entry : todasPessoas.entrySet()) {
+        for (Map.Entry<String, String> entry : todasPessoas.entrySet()) {
             PessoaIMC pessoaIMC = gson.fromJson(entry.getValue().toString(), PessoaIMC.class);
             TextView textNome = new TextView(this);
             textNome.setLayoutParams(layoutParamsNome);
