@@ -1,0 +1,1099 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Desenvolvimento para Dispositivos Móveis</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/simple.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #a7c73f"><b>Desenvolvimento para Dispositivos Móveis</b></font>
+					<center><img src="img/1.png" style="all:unset;"></center>
+					<span><font size="6"><b>Aula 06</b></font></span><br>
+					<span><font size="4">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4">raulcezar@gmail.com</font>
+				</section>				
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					É uma plataforma de backend para construção de aplicações Web, Android e iOS. Ela oferece: base de dados de tempo-real, diferentes APIs, serviço de autenticação e hospedagem. Então, seu App pode se conectar a um projeto no Firebase para usar os serviços citados. O Android Studio facilita essa integração.<br>
+					<img src="img/2a.png" style="all:unset;width:50%">
+				</section>				
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<ul>
+						<li><b>Real-time database: </b>suporta dados JSON como forma de estruturar os dados, e todos os usuários conectados a ele recebem atualizações após cada mudança.
+						</li>
+						<li><b>Authentication: </b> pode−se usar diferentes formas de autenticação na sua aplicação, como: anônimo, usuário-senha, e contas de redes sociais.
+						</li>
+						<li><b>Hosting: </b>o backend da aplicação pode ser hospedado nos servidores Firebase, inclusive com conexão segura.
+						</li>
+					</ul>
+				</section>			
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<ul><b>Vantagens: </b>
+						<li>Fácil e amigável de usar, sem configurações complexas.</li>
+						<li>Os dados são de tempo-real, o que significa que cada mudança automaticamente atualiza as informações dos clientes conectados.</li>
+						<li>Oferece um painel de controle simples para serviços.</li>
+						<li>Existem diversos serviços úteis disponíveis.</li>
+					</ul>
+					<ul><b>Desvantagens: </b>
+						<li>O plano grátis é limitado a 50 conexões e 100MB de armazenamento.</li>
+					</ul>
+				</section>			
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Site: </b>é necessário uma conta google</span><br>
+					<img src="img/3a.png" style="all:unset;width:100%">
+				</section>		
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Console de um projeto: </b>serviços disponíveis</span><br>
+					<img src="img/4a.png" style="all:unset;width:100%">
+				</section>			
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Autenticação>>usuários: </b>mostra os usuários cadastrados para logar no seu App.</span><br>
+					<img src="img/5a.png" style="all:unset;width:100%">
+				</section>			
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Autenticação>>método de login: </b>tipos de autenticação. Pode ser: anônimo, usuário-senha com autocadastro direto no seu app, ou por conta de redes sociais.</span>
+					<br>
+					<img src="img/6a.png" style="all:unset;width:100%">
+				</section>		
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Autenticação>>modelos: </b>verificações de cadastro.</span>
+					<br>
+					<img src="img/7a.png" style="all:unset;width:100%">
+				</section>		
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Autenticação>>modelos: </b>verificações de cadastro.</span>
+					<br>
+					<img src="img/8a.png" style="all:unset;width:100%">
+				</section>		
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Autenticação>>modelos: </b>verificações de cadastro.</span>
+					<br>
+					<img src="img/9a.png" style="all:unset;width:100%">
+				</section>		
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Autenticação>>modelos: </b>verificações de cadastro.</span>
+					<br>
+					<img src="img/10a.png" style="all:unset;width:100%">
+				</section>		
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Autenticação>>modelos: </b>verificações de cadastro.</span>
+					<br>
+					<img src="img/11a.png" style="all:unset;width:100%">
+				</section>		
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Database: </b>oferece 2 sistemas.</span>
+					<br>
+					<font size="5">
+					<table>
+						<tr><td><b>Realtime Database</b></td><td><b>Cloud Firestore</b></td></tr>
+						<tr><td>Armazena dados como uma grande árvore JSON.</td><td>Armazena dados em documentos organizados em coleções.</td></tr>
+						<tr><td>Suporte off-line para clientes móveis apenas no iOS e Android.</td><td>Suporte off-line para clientes iOS, Android e da Web.</td></tr>
+						<tr><td>Consultas avançadas com funcionalidade limitada de classificação e filtragem.</td><td>Consultas indexadas com classificação e filtragem compostas.</td></tr>
+						<tr><td>Operações básicas de gravação e transação.</td><td>Operações em lote atômicas de gravação e transação.</td></tr>
+						<tr><td>É um produto maduro.</td><td>Está na versão Beta.</td></tr>
+					</table>
+					</font>
+				</section>					
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Database: </b>armazenamento de dados remoto.</span>
+					<br>
+					<img src="img/12a.png" style="all:unset;width:100%">
+				</section>					
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Database>>dados: </b>mostra/adiciona/remove dados da estrutura.</span>
+					<br>
+					<img src="img/13a.png" style="all:unset;width:100%">
+				</section>				
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Database>>regras: </b>permissões de leitura e escrita na estrutura de dados.</span>
+					<br>
+					<img src="img/14a.png" style="all:unset;width:100%">
+				</section>				
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Database>>backups: </b>por padrão na versão free não há.</span>
+					<br>
+					<img src="img/15a.png" style="all:unset;width:100%">
+				</section>				
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Database>>uso: </b>estatísticas de dispositivos conectados, espaço de armazenamento, etc.</span>
+					<br>
+					<img src="img/16a.png" style="all:unset;width:100%">
+				</section>				
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Storage: </b>armazenamento de mídias e dados não estruturados.</span>
+					<br>
+					<img src="img/17a.png" style="all:unset;width:100%">
+				</section>				
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Hosting: </b>hospedagem de aplicações web.</span>
+					<br>
+					<img src="img/18a.png" style="all:unset;width:100%">
+				</section>			
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>Function: </b>rodar funções de backend com JS no servidor Firebase.</span>
+					<br>
+					<img src="img/19a.png" style="all:unset;width:100%">
+				</section>			
+				<section>
+					<h3><b>Google - Firebase</b></h3>
+					<span><b>ML Kit: </b>algoritmos de Machine Learning (IA) para: reconhecimento de texto, detecção de rostos, leitura de códigos de barras, identificação de imagens e reconhecimento de pontos de referência. Algoritmos já treinados, seu App envia o dado (imagem, texto, etc) e o serviço Firebase retorna a resposta.</span>
+					<br>
+					<img src="img/20a.png" style="all:unset;width:100%">
+				</section>		
+				<section>
+					<h3><b>Criação de App com autenticação no Firebase</b></h3>
+					<img src="img/21a.png" style="all:unset;width:70%">
+				</section>		
+				<section>
+					<h3><b>Criação de App com autenticação no Firebase</b></h3>
+					<ul><span><b>pré-requisitos</b></span>
+						<li>dispositivo com versão 4.0 ou superior</li>	
+						<li>Google Play Services 11.0.4 ou superior</li>
+						<li>Android Studio versão 1.5 ou superior</li>	
+						<li>usar Firebase Assistant do Android Studio</li>	
+						<li>se for usar emulador, certifique-se de criá-lo usando uma imagem que possua a Play Store instalada</li>			
+					</ul>
+				</section>						
+				<section>
+					<h3><b>Crie um novo projeto no Android Studio</b></h3>
+					<img src="img/2.png" style="all:unset;width:70%">
+				</section>						
+				<section>
+					<h3><b>Crie um novo projeto no Android Studio</b></h3>
+					<img src="img/3.png" style="all:unset;width:70%">
+				</section>						
+				<section>
+					<h3><b>Crie um novo projeto no Android Studio</b></h3>
+					<img src="img/4.png" style="all:unset;width:70%">
+				</section>						
+				<section>
+					<h3><b>Crie um novo projeto no Android Studio</b></h3>
+					<span>Selecione uma Activity do tipo login. Isso criará toda a estrutura para logar, deslocar e autocadastrar um usuário no Firebase futuramente.</span><br>
+					<img src="img/5.png" style="all:unset;width:60%">
+				</section>						
+				<section>
+					<h3><b>Crie um novo projeto no Android Studio</b></h3>
+					<span>Selecione uma Activity do tipo login. Isso criará toda a estrutura para logar, deslocar e autocadastrar um usuário no Firebase futuramente.</span><br>
+					<img src="img/6.png" style="all:unset;width:60%">
+				</section>							
+				<section>
+					<h3>Depois disso, vá no menu Tools > Firebase e o Firebase Assistant se abrirá, com diversas opções.</h3>
+					<img src="img/7.png" style="all:unset;width:35%">
+				</section>							
+				<section>
+					<h3>Escolha a Authentication.</h3>
+					<img src="img/8.png" style="all:unset;width:55%">
+				</section>							
+				<section>
+					<h3>O método de autenticação será por e-mail e senha. O primeiro passo é conectar seu app ao Firebase, clicando no botão "Connect to Firebase".</h3>
+					<img src="img/9.png" style="all:unset;width:35%">
+				</section>								
+				<section>
+					<h3>Será necessário se conectar a sua conta google. Um site será aberto para logar e dar as permissões.</h3>
+					<img src="img/11.png" style="all:unset;width:25%">
+				</section>								
+				<section>
+					<h3>Será necessário se conectar a sua conta google. Um site será aberto para logar e dar as permissões.</h3>
+					<img src="img/12.png" style="all:unset;width:35%">
+				</section>								
+				<section>
+					<h3>Se tudo aconteceu corretamente, você deve ver a tela de sucesso informando que você já pode voltar ao Android Studio.</h3>
+					<img src="img/12.png" style="all:unset;width:35%">
+				</section>								
+				<section>
+					<h3>Quando voltar ao Android Studio, configure um novo Firebase Project, que basicamente é o seu projeto de backend. Use o mesmo nome do seu projeto e selecione a região Brazil.</h3>
+					<img src="img/13.png" style="all:unset;width:35%">
+				</section>									
+				<section>
+					<h3>Algumas dependências serão baixadas. Depois disso, o Firebase mostrará que está conectado ao Android Studio. Agora adicione a autenticação ao App.</h3>
+					<img src="img/14.png" style="all:unset;width:35%">
+				</section>									
+				<section>
+					<h3>Mais dependências serão instaladas. Aceite as modificações.</h3>
+					<img src="img/15.png" style="all:unset;width:55%">
+				</section>										
+				<section>
+					<h3>Em caso de warnings modifique o arquivo chamado app.</h3>
+					<img src="img/16.png" style="all:unset;width:75%">
+				</section>										
+				<section>
+					<h3>Abra o console do Firebase.</h3>
+					<img src="img/17.png" style="all:unset;width:35%">
+				</section>										
+				<section>
+					<h3>Selecione seu projeto no Firebase.</h3>
+					<img src="img/18.png" style="all:unset;width:85%">
+				</section>										
+				<section>
+					<h3>Abra Desenvolvedor>>Authentication>>Configurar método de login.</h3>
+					<img src="img/19.png" style="all:unset;width:75%">
+				</section>										
+				<section>
+					<h3>Selecione e-mail/senha.</h3>
+					<img src="img/20.png" style="all:unset;width:75%">
+				</section>										
+				<section>
+					<h3>Mande ativar.</h3>
+					<img src="img/21.png" style="all:unset;width:75%">
+				</section>										
+				<section>
+					<h3>Crie uma nova Activity para ser a Main.</h3>
+					<img src="img/22.png" style="all:unset;width:75%">
+				</section>										
+				<section>
+					<h3>Selecione "Launcher" para ela ser lançada ao ligar o App e "Fragment" para termos um menu.</h3>
+					<img src="img/23.png" style="all:unset;width:60%">
+				</section>										
+				<section>
+					<h3>Remova o "Launcher" da activity Login, criada primeiro, no manifest.</h3>
+					<img src="img/24.png" style="all:unset;width:60%">
+				</section>										
+				<section>
+					<h3>Explicando MainActivity.java.</h3>
+					<span>Instância de acesso ao Autenticador Firebase.</span>
+					<img src="img/33.png" style="all:unset;width:100%">
+				</section>										
+				<section>
+					<h3>Explicando MainActivity.java.</h3>
+					<span>Ao acessar o App, esta activity é acionada e o primeiro método executado é o onCreate.</span>
+					<img src="img/34.png" style="all:unset;width:100%">
+				</section>										
+				<section>
+					<h3>Explicando MainActivity.java.</h3>
+					<span>Se o usuário estiver logado mostra msg de boas vindas, senão redireciona para a activity de login.</span>
+					<img src="img/34.png" style="all:unset;width:100%">
+				</section>											
+				<section>
+					<h3>Explicando MainActivity.java.</h3>
+					<span>Esta activity possui um menu, e ao ser criado o adiciona na activity (infla ao ser clicado no canto direito superior).</span><br>
+					<img src="img/35.png" style="all:unset;width:80%">
+				</section>											
+				<section>
+					<h3>Explicando MainActivity.java.</h3>
+					<span>Existe uma opção no menu que é "sair". Caso ela seja selecionada, o logout é executado e o usuário é redirecionado para a activity de login.</span><br>
+					<img src="img/36.png" style="all:unset;width:75%">
+				</section>	
+				<section>
+					<h3><b>MainActivity.java</b></h3>
+					<pre><code>
+package mobile.pitagoras.uatzap;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+public class MainActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user != null) {
+            Toast.makeText(getApplicationContext(), &#x22;Bem vindo de volta &#x22; + user.getEmail() + &#x22;!&#x22;, Toast.LENGTH_LONG).show();
+        } else {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_exit) {
+            mAuth.signOut();
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}
+					</code></pre>					
+				</section>	
+				<section>
+					<h3>Explicando activity_main.xml.</h3>
+					<span>Utiliza um LinearLayout e possui apenas uma área para aparecer uma barra de menu.</span><br>
+					<img src="img/37.png" style="all:unset;width:75%">
+				</section>	
+				<section>
+					<h3><b>activity_main.xml</b></h3>
+					<pre><code>
+&#x3C;?xml version=&#x22;1.0&#x22; encoding=&#x22;utf-8&#x22;?&#x3E;
+&#x3C;LinearLayout xmlns:android=&#x22;http://schemas.android.com/apk/res/android&#x22;
+    xmlns:tools=&#x22;http://schemas.android.com/tools&#x22;
+    android:layout_width=&#x22;match_parent&#x22;
+    android:layout_height=&#x22;match_parent&#x22;
+    xmlns:app=&#x22;http://schemas.android.com/apk/res-auto&#x22;
+    android:orientation=&#x22;vertical&#x22;
+    tools:context=&#x22;.MainActivity&#x22;&#x3E;
+    &#x3C;android.support.design.widget.AppBarLayout
+        android:layout_width=&#x22;match_parent&#x22;
+        android:layout_height=&#x22;wrap_content&#x22;
+        android:theme=&#x22;@style/AppTheme.AppBarOverlay&#x22;&#x3E;
+        &#x3C;android.support.v7.widget.Toolbar
+            android:id=&#x22;@+id/toolbar&#x22;
+            android:layout_width=&#x22;match_parent&#x22;
+            android:layout_height=&#x22;?attr/actionBarSize&#x22;
+            android:background=&#x22;?attr/colorPrimary&#x22;
+            app:popupTheme=&#x22;@style/AppTheme.PopupOverlay&#x22; /&#x3E;
+    &#x3C;/android.support.design.widget.AppBarLayout&#x3E;
+    &#x3C;include layout=&#x22;@layout/content_main&#x22; /&#x3E;
+   &#x3C;/LinearLayout&#x3E;
+					</code></pre>					
+				</section>	
+				<section>
+					<h3>Explicando menu_main.xml.</h3>
+					<span>Descreve o menu que aparece na main, com item para sair.</span><br>
+					<img src="img/38.png" style="all:unset;width:75%">
+				</section>	
+				<section>
+					<h3><b>menu_main.xml</b></h3>
+					<pre><code>
+&#x3C;menu xmlns:android=&#x22;http://schemas.android.com/apk/res/android&#x22;
+    xmlns:app=&#x22;http://schemas.android.com/apk/res-auto&#x22;
+    xmlns:tools=&#x22;http://schemas.android.com/tools&#x22;
+    tools:context=&#x22;mobile.pitagoras.uatzap.MainActivity&#x22;&#x3E;
+    &#x3C;item
+        android:id=&#x22;@+id/action_exit&#x22;
+        android:orderInCategory=&#x22;100&#x22;
+        android:title=&#x22;Sair&#x22;
+        app:showAsAction=&#x22;never&#x22; /&#x3E;
+&#x3C;/menu&#x3E;
+					</code></pre>					
+				</section>		
+				<section>
+					<h3>Explicando LoginActivity.java.</h3>
+					<span>Vários métodos foram criados automaticamente por termos escolhido uma activity do tipo login.</span><br>
+					<img src="img/39.png" style="all:unset;width:80%">
+				</section>		
+				<section>
+					<h3>Explicando LoginActivity.java.</h3>
+					<span>Para aproveitar o código já existente, vamos modificar o método <b>attemptLogin</b> para que ele sirva para signin ou signup, de acordo com um parâmetro passado à ele.</span><br>
+					<img src="img/39.png" style="all:unset;width:80%">
+				</section>	
+				<section>
+					<h3>Explicando LoginActivity.java.</h3>
+					<span>Ele passará a se chamar <b>attemptLoginOrRegister</b> que serve para tentar logar ou se autocadastrar. Isso depende do botão que o usuário irá clicar.</span><br>
+					<img src="img/39.png" style="all:unset;width:80%">
+				</section>
+				<section>
+					<h3><b>LoginActivity.java</b></h3>
+					<pre><code>
+package mobile.pitagoras.uatzap;
+
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.annotation.TargetApi;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.app.LoaderManager.LoaderCallbacks;
+import android.content.CursorLoader;
+import android.content.Loader;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.text.TextUtils;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.inputmethod.EditorInfo;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import java.util.ArrayList;
+import java.util.List;
+import static android.Manifest.permission.READ_CONTACTS;
+
+public class LoginActivity extends AppCompatActivity implements LoaderCallbacks&#x3C;Cursor&#x3E; {
+    private FirebaseAuth mAuth;
+    private static final int REQUEST_READ_CONTACTS = 0;
+    private static final String[] DUMMY_CREDENTIALS = new String[]{ &#x22;foo@example.com:hello&#x22;, &#x22;bar@example.com:world&#x22;};
+    private UserLoginTask mAuthTask = null;
+    private AutoCompleteTextView mEmailView;
+    private EditText mPasswordView;
+    private View mProgressView;
+    private View mLoginFormView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
+        populateAutoComplete();
+        mPasswordView = (EditText) findViewById(R.id.password);
+        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
+                if (id == R.id.login || id == EditorInfo.IME_NULL) {
+                    attemptLoginOrRegister(false);
+                    return true;
+                }
+                return false;
+            }
+        });
+        mAuth = FirebaseAuth.getInstance();
+        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        mEmailSignInButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                attemptLoginOrRegister(false);
+            }
+        });
+        Button mSignUpButton = (Button) findViewById(R.id.email_sign_up_button);
+        mSignUpButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                attemptLoginOrRegister(true);
+            }
+        });
+        mLoginFormView = findViewById(R.id.login_form);
+        mProgressView = findViewById(R.id.login_progress);
+    }
+    private void populateAutoComplete() {
+        if (!mayRequestContacts()) {
+            return;
+        }
+        getLoaderManager().initLoader(0, null, this);
+    }
+    private boolean mayRequestContacts() {
+        if (Build.VERSION.SDK_INT &#x3C; Build.VERSION_CODES.M) {
+            return true;
+        }
+        if (checkSelfPermission(READ_CONTACTS) == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        }
+        if (shouldShowRequestPermissionRationale(READ_CONTACTS)) {
+            Snackbar.make(mEmailView, R.string.permission_rationale, Snackbar.LENGTH_INDEFINITE)
+                    .setAction(android.R.string.ok, new View.OnClickListener() {
+                        @Override
+                        @TargetApi(Build.VERSION_CODES.M)
+                        public void onClick(View v) {
+                            requestPermissions(new String[]{READ_CONTACTS}, REQUEST_READ_CONTACTS);
+                        }
+                    });
+        } else {
+            requestPermissions(new String[]{READ_CONTACTS}, REQUEST_READ_CONTACTS);
+        }
+        return false;
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,@NonNull int[] grantResults) {
+        if (requestCode == REQUEST_READ_CONTACTS) {
+            if (grantResults.length == 1 &#x26;&#x26; grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                populateAutoComplete();
+            }
+        }
+    }
+    private void attemptLoginOrRegister(boolean isNewUser) {
+        if (mAuthTask != null) {
+            return;
+        }
+        mEmailView.setError(null);
+        mPasswordView.setError(null);
+        String email = mEmailView.getText().toString();
+        String password = mPasswordView.getText().toString();
+        boolean cancel = false;
+        View focusView = null;
+        if (!TextUtils.isEmpty(password) &#x26;&#x26; !isPasswordValid(password)) {
+            mPasswordView.setError(getString(R.string.error_invalid_password));
+            focusView = mPasswordView;
+            cancel = true;
+        }
+        if (TextUtils.isEmpty(email)) {
+            mEmailView.setError(getString(R.string.error_field_required));
+            focusView = mEmailView;
+            cancel = true;
+        } else if (!isEmailValid(email)) {
+            mEmailView.setError(getString(R.string.error_invalid_email));
+            focusView = mEmailView;
+            cancel = true;
+        }
+        if (cancel) {
+            focusView.requestFocus();
+        } else {
+            showProgress(true);
+            if(isNewUser) {
+                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener&#x3C;AuthResult&#x3E;() {
+                    @Override
+                    public void onComplete(@NonNull Task&#x3C;AuthResult&#x3E; task) {
+                        showProgress(false);
+                        Toast.makeText(getApplicationContext(), &#x22;Usu&#xE1;rio cadastrado com sucesso. Agora voc&#xEA; pode se autenticar com suas credenciais!&#x22;, Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
+            else {
+                try {
+                    mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener&#x3C;AuthResult&#x3E;() {
+                        @Override
+                        public void onComplete(@NonNull Task&#x3C;AuthResult&#x3E; task) {
+                            showProgress(false);
+                            if (task.getResult().getUser() != null) {
+                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                finish();
+                            } else {
+                                Toast.makeText(getApplicationContext(), &#x22;Email e/ou senha incorretos.&#x22;, Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    private boolean isEmailValid(String email) {
+        return email.contains(&#x22;@&#x22;);
+    }
+    private boolean isPasswordValid(String password) {
+        return password.length() &#x3E; 4;
+    }
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
+    private void showProgress(final boolean show) {
+        if (Build.VERSION.SDK_INT &#x3E;= Build.VERSION_CODES.HONEYCOMB_MR2) {
+            int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
+            mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+            mLoginFormView.animate().setDuration(shortAnimTime).alpha(
+                    show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+                }
+            });
+            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+            mProgressView.animate().setDuration(shortAnimTime).alpha(
+                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+                }
+            });
+        } else {
+            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+            mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+        }
+    }
+    @Override
+    public Loader&#x3C;Cursor&#x3E; onCreateLoader(int i, Bundle bundle) {
+        return new CursorLoader(this,
+                Uri.withAppendedPath(ContactsContract.Profile.CONTENT_URI,
+                        ContactsContract.Contacts.Data.CONTENT_DIRECTORY), ProfileQuery.PROJECTION,
+                ContactsContract.Contacts.Data.MIMETYPE +
+                        &#x22; = ?&#x22;, new String[]{ContactsContract.CommonDataKinds.Email
+                .CONTENT_ITEM_TYPE},
+                ContactsContract.Contacts.Data.IS_PRIMARY + &#x22; DESC&#x22;);
+    }
+    @Override
+    public void onLoadFinished(Loader&#x3C;Cursor&#x3E; cursorLoader, Cursor cursor) {
+        List&#x3C;String&#x3E; emails = new ArrayList&#x3C;&#x3E;();
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            emails.add(cursor.getString(ProfileQuery.ADDRESS));
+            cursor.moveToNext();
+        }
+        addEmailsToAutoComplete(emails);
+    }
+    @Override
+    public void onLoaderReset(Loader&#x3C;Cursor&#x3E; cursorLoader) {    }
+    private void addEmailsToAutoComplete(List&#x3C;String&#x3E; emailAddressCollection) {
+        ArrayAdapter&#x3C;String&#x3E; adapter =
+                new ArrayAdapter&#x3C;&#x3E;(LoginActivity.this,
+                        android.R.layout.simple_dropdown_item_1line, emailAddressCollection);
+        mEmailView.setAdapter(adapter);
+    }
+    private interface ProfileQuery {
+        String[] PROJECTION = {
+                ContactsContract.CommonDataKinds.Email.ADDRESS,
+                ContactsContract.CommonDataKinds.Email.IS_PRIMARY,
+        };
+
+        int ADDRESS = 0;
+        int IS_PRIMARY = 1;
+    }
+    public class UserLoginTask extends AsyncTask&#x3C;Void, Void, Boolean&#x3E; {
+        private final String mEmail;
+        private final String mPassword;
+        UserLoginTask(String email, String password) {
+            mEmail = email;
+            mPassword = password;
+        }
+        @Override
+        protected Boolean doInBackground(Void... params) {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                return false;
+            }
+            for (String credential : DUMMY_CREDENTIALS) {
+                String[] pieces = credential.split(&#x22;:&#x22;);
+                if (pieces[0].equals(mEmail)) {
+                    return pieces[1].equals(mPassword);
+                }
+            }
+            return true;
+        }
+
+        @Override
+        protected void onPostExecute(final Boolean success) {
+            mAuthTask = null;
+            showProgress(false);
+
+            if (success) {
+                finish();
+            } else {
+                mPasswordView.setError(getString(R.string.error_incorrect_password));
+                mPasswordView.requestFocus();
+            }
+        }
+
+        @Override
+        protected void onCancelled() {
+            mAuthTask = null;
+            showProgress(false);
+        }
+    }
+}
+					</code></pre>					
+				</section>	
+				<section>
+					<h3>Explicando activity_login.xml.</h3>
+					<span>Possui um campo para e-mail e outro para senha, e dois botões, um para logar e outro pra se registrar. Ambos enviam os dados para o Firebase.</span>
+				</section>	
+				<section>
+					<h3><b>activity_login.xml</b></h3>
+					<pre><code>
+&#x3C;LinearLayout xmlns:android=&#x22;http://schemas.android.com/apk/res/android&#x22;
+    xmlns:tools=&#x22;http://schemas.android.com/tools&#x22;
+    android:layout_width=&#x22;match_parent&#x22;
+    android:layout_height=&#x22;match_parent&#x22;
+    android:gravity=&#x22;center_horizontal&#x22;
+    android:orientation=&#x22;vertical&#x22;
+    android:paddingBottom=&#x22;@dimen/activity_vertical_margin&#x22;
+    android:paddingLeft=&#x22;@dimen/activity_horizontal_margin&#x22;
+    android:paddingRight=&#x22;@dimen/activity_horizontal_margin&#x22;
+    android:paddingTop=&#x22;@dimen/activity_vertical_margin&#x22;
+    tools:context=&#x22;.LoginActivity&#x22;&#x3E;
+    &#x3C;ProgressBar
+        android:id=&#x22;@+id/login_progress&#x22;
+        style=&#x22;?android:attr/progressBarStyleLarge&#x22;
+        android:layout_width=&#x22;wrap_content&#x22;
+        android:layout_height=&#x22;wrap_content&#x22;
+        android:layout_marginBottom=&#x22;8dp&#x22;
+        android:visibility=&#x22;gone&#x22; /&#x3E;
+    &#x3C;ScrollView
+        android:id=&#x22;@+id/login_form&#x22;
+        android:layout_width=&#x22;match_parent&#x22;
+        android:layout_height=&#x22;match_parent&#x22;&#x3E;
+        &#x3C;LinearLayout
+            android:id=&#x22;@+id/email_login_form&#x22;
+            android:layout_width=&#x22;match_parent&#x22;
+            android:layout_height=&#x22;wrap_content&#x22;
+            android:orientation=&#x22;vertical&#x22;&#x3E;
+            &#x3C;android.support.design.widget.TextInputLayout
+                android:layout_width=&#x22;match_parent&#x22;
+                android:layout_height=&#x22;wrap_content&#x22;&#x3E;
+                &#x3C;AutoCompleteTextView
+                    android:id=&#x22;@+id/email&#x22;
+                    android:layout_width=&#x22;match_parent&#x22;
+                    android:layout_height=&#x22;wrap_content&#x22;
+                    android:hint=&#x22;@string/prompt_email&#x22;
+                    android:inputType=&#x22;textEmailAddress&#x22;
+                    android:maxLines=&#x22;1&#x22;
+                    android:singleLine=&#x22;true&#x22; /&#x3E;
+            &#x3C;/android.support.design.widget.TextInputLayout&#x3E;
+            &#x3C;android.support.design.widget.TextInputLayout
+                android:layout_width=&#x22;match_parent&#x22;
+                android:layout_height=&#x22;wrap_content&#x22;&#x3E;
+                &#x3C;EditText
+                    android:id=&#x22;@+id/password&#x22;
+                    android:layout_width=&#x22;match_parent&#x22;
+                    android:layout_height=&#x22;wrap_content&#x22;
+                    android:hint=&#x22;Senha&#x22;
+                    android:imeActionId=&#x22;@+id/login&#x22;
+                    android:imeActionLabel=&#x22;@string/action_sign_in_short&#x22;
+                    android:imeOptions=&#x22;actionUnspecified&#x22;
+                    android:inputType=&#x22;textPassword&#x22;
+                    android:maxLines=&#x22;1&#x22;
+                    android:singleLine=&#x22;true&#x22; /&#x3E;
+            &#x3C;/android.support.design.widget.TextInputLayout&#x3E;
+            &#x3C;Button
+                android:id=&#x22;@+id/email_sign_in_button&#x22;
+                style=&#x22;?android:textAppearanceSmall&#x22;
+                android:layout_width=&#x22;match_parent&#x22;
+                android:layout_height=&#x22;wrap_content&#x22;
+                android:layout_marginTop=&#x22;16dp&#x22;
+                android:background=&#x22;@color/colorPrimaryDark&#x22;
+                android:textColor=&#x22;@android:color/white&#x22;
+                android:text=&#x22;Entrar&#x22;
+                android:textStyle=&#x22;bold&#x22; /&#x3E;
+            &#x3C;Button
+                android:id=&#x22;@+id/email_sign_up_button&#x22;
+                style=&#x22;?android:textAppearanceSmall&#x22;
+                android:layout_width=&#x22;match_parent&#x22;
+                android:layout_height=&#x22;wrap_content&#x22;
+                android:layout_marginTop=&#x22;16dp&#x22;
+                android:text=&#x22;Registrar&#x22;
+                android:textStyle=&#x22;bold&#x22; /&#x3E;
+        &#x3C;/LinearLayout&#x3E;
+    &#x3C;/ScrollView&#x3E;
+&#x3C;/LinearLayout&#x3E;
+				</code></pre>					
+				</section>	
+				<section>
+					<h3><b>pacotes do seu projeto</b></h3>
+					Verifique se o caminho dos pacotes estão corretos. Este código está em <b>package mobile.pitagoras.uatzap</b>, e deve ser trocado pelo local do seu código.
+				</section>	
+				<section>
+					<h3><b>Outros arquivos</b></h3>
+					Verifique também se os seguintes arquivos estão corretos.
+				</section>	
+				<section>
+					<h3><b>build.gradle (Module: app)</b></h3>
+					<pre><code>
+apply plugin: &#x27;com.android.application&#x27;
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId &#x22;mobile.pitagoras.uatzap&#x22;
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName &#x22;1.0&#x22;
+        testInstrumentationRunner &#x22;android.support.test.runner.AndroidJUnitRunner&#x22;
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(&#x27;proguard-android.txt&#x27;), &#x27;proguard-rules.pro&#x27;
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: &#x27;libs&#x27;, include: [&#x27;*.jar&#x27;])
+    //noinspection GradleCompatible
+    implementation &#x27;com.android.support:appcompat-v7:28.0.0&#x27;
+    implementation &#x27;com.android.support:design:28.0.0&#x27;
+    implementation &#x27;com.google.firebase:firebase-auth:11.6.0&#x27;
+    implementation &#x27;com.google.firebase:firebase-core:11.6.0&#x27;
+    implementation &#x27;com.google.firebase:firebase-database:11.6.0&#x27;
+    implementation &#x27;com.android.support.constraint:constraint-layout:1.1.3&#x27;
+    testImplementation &#x27;junit:junit:4.12&#x27;
+    androidTestImplementation &#x27;com.android.support.test:runner:1.0.2&#x27;
+    androidTestImplementation &#x27;com.android.support.test.espresso:espresso-core:3.0.2&#x27;
+}
+
+apply plugin: &#x27;com.google.gms.google-services&#x27;
+					</code></pre>					
+				</section>	
+				<section>
+					<h3><b>build.gradle (Project: UatZap)</b></h3>
+					<pre><code>
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath &#x27;com.android.tools.build:gradle:3.1.3&#x27;
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath &#x27;com.google.gms:google-services:3.1.1&#x27;
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+					</code></pre>					
+				</section>	
+				<section>
+					<h3><b>AndroidManifest.xml</b></h3>
+					<pre><code>
+&#x3C;?xml version=&#x22;1.0&#x22; encoding=&#x22;utf-8&#x22;?&#x3E;
+&#x3C;manifest xmlns:android=&#x22;http://schemas.android.com/apk/res/android&#x22; package=&#x22;mobile.pitagoras.uatzap&#x22;&#x3E;
+    &#x3C;uses-permission android:name=&#x22;android.permission.GET_ACCOUNTS&#x22; /&#x3E;
+    &#x3C;uses-permission android:name=&#x22;android.permission.READ_PROFILE&#x22; /&#x3E;
+    &#x3C;uses-permission android:name=&#x22;android.permission.READ_CONTACTS&#x22; /&#x3E;
+    &#x3C;application
+        android:allowBackup=&#x22;true&#x22;
+        android:icon=&#x22;@mipmap/ic_launcher&#x22;
+        android:label=&#x22;@string/app_name&#x22;
+        android:roundIcon=&#x22;@mipmap/ic_launcher_round&#x22;
+        android:supportsRtl=&#x22;true&#x22;
+        android:theme=&#x22;@style/AppTheme&#x22;&#x3E;
+        &#x3C;activity
+            android:name=&#x22;.LoginActivity&#x22;
+            android:label=&#x22;@string/app_name&#x22;&#x3E;
+            &#x3C;intent-filter&#x3E;
+                &#x3C;action android:name=&#x22;android.intent.action.MAIN&#x22; /&#x3E;
+            &#x3C;/intent-filter&#x3E;
+        &#x3C;/activity&#x3E;
+        &#x3C;activity
+            android:name=&#x22;.MainActivity&#x22;
+            android:label=&#x22;@string/title_activity_main&#x22;
+            android:theme=&#x22;@style/AppTheme.NoActionBar&#x22;&#x3E;
+            &#x3C;intent-filter&#x3E;
+                &#x3C;action android:name=&#x22;android.intent.action.MAIN&#x22; /&#x3E;
+                &#x3C;category android:name=&#x22;android.intent.category.LAUNCHER&#x22; /&#x3E;
+            &#x3C;/intent-filter&#x3E;
+        &#x3C;/activity&#x3E;
+    &#x3C;/application&#x3E;
+&#x3C;/manifest&#x3E;
+					</code></pre>					
+				</section>	
+				<section>
+					<h3><b>Autoregistro App+Firebase</b></h3>
+					<img src="img/27.png" style="all:unset;width:30%">
+				</section>	
+				<section>
+					<h3><b>Autoregistro App+Firebase</b></h3>
+					<img src="img/28.png" style="all:unset;width:100%">
+				</section>	
+				<section>
+					<h3><b>Criar nova activity</b></h3>
+					<img src="img/3.png" style="all:unset;width: 80%">
+				</section>	
+				<section>
+					<h3><b>Criar nova activity</b></h3>
+					<img src="img/4.png" style="all:unset;width: 75%">
+				</section>	
+				<section>
+					<h3><b>Criar nova activity</b></h3>
+					<img src="img/5.png" style="all:unset;width: 100%">
+				</section>	
+				<section>
+					<h3><b>Modificar activity_listagem.xml</b></h3>
+					<ul>
+						<li>aplicar mesmo layout da activity_main.xml</li>
+						<li>deixar apenas o texto "IMC da Família"</li>
+					</ul>
+					<pre><code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+android:layout_width=&quot;match_parent&quot;
+android:layout_height=&quot;match_parent&quot;
+android:orientation=&quot;vertical&quot;
+android:background=&quot;@drawable/fundo&quot;
+tools:context=&quot;.ListagemActivity&quot;&gt;
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_gravity=&quot;center&quot;
+        android:textSize=&quot;25sp&quot;
+        android:layout_marginTop=&quot;10dp&quot;
+        android:text=&quot;@string/imc_da_familia&quot;
+        android:textColor=&quot;@color/colorPrimary&quot;
+        /&gt;
+&lt;/LinearLayout&gt;
+					</code></pre>					
+				</section>					
+				<section>
+					<h3><b>Navegação entre activities</b></h3>
+					<ul>
+						<li>crie um método chamado Listar na classe <b>MainActivity</b> que aciona a classe ListagemActivity, fazendo assim a navegação da tela Main para a tela Listagem</li>
+						<li>deve ser utilizado o recurso Intent que registra a intenção de fazer a interação de uma activity com outra
+						<li>crie mais um botão na tela <b>activity_main.xml</b> que ao ser clicado chame o método Listar</li>
+						<li>ajuste a distância entre os elementos da tela, caso não estejam cabendo</li>
+					</ul>
+				</section>
+				<section>
+					<h3><b>Navegação entre activities</b></h3>
+					<img src="img/6.png" style="all:unset;width: 100%">
+				</section>	
+				<section>
+					<h3><b>Navegação entre activities</b></h3>
+					<img src="img/7.png" style="all:unset;width: 55%">
+				</section>	
+				<section>
+					<h3><b>Navegação entre activities</b></h3>
+					<img src="img/8.png" style="all:unset;width:80%">
+				</section>	
+				<section>
+					<h3><b>Modificar classe ListagemActivity</b></h3>
+					<ul>
+						<li>método onCreate: instanciar SharedPreferences e acionar metodo Buscar</li>
+						<li>método Buscar(): buscar todos os dados da memória e montar dinamicamente uma lista com os dados</li>
+					</ul>
+					<pre><code>
+package mobile.pitagoras.imc;
+
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import com.google.gson.Gson;
+import java.util.Map;
+import mobile.pitagoras.imc.utils.ArmazenamentoIMC;
+import mobile.pitagoras.imc.utils.PessoaIMC;
+
+public class ListagemActivity extends AppCompatActivity {
+    private ArmazenamentoIMC armazenamentoIMC;
+    Gson gson = new Gson();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_listagem);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+        armazenamentoIMC = new ArmazenamentoIMC(this);
+        Buscar();
+    }
+
+    public void Buscar(){
+        LinearLayout listagem_layout = (LinearLayout)findViewById(R.id.listagem_layout);
+        Map<String,String> todasPessoas = armazenamentoIMC.buscarTodos();
+        listagem_layout.removeAllViews();
+        LinearLayout.LayoutParams layoutParamsTitulo = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        layoutParamsTitulo.setMargins(10,30,0,0);
+        layoutParamsTitulo.gravity = Gravity.CENTER;
+        LinearLayout.LayoutParams layoutParamsNome = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        layoutParamsNome.setMargins(10,20,0,0);
+        LinearLayout.LayoutParams layoutParamsDados = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        layoutParamsDados.setMargins(10,0,0,0);
+        TextView textIMCFamilia = new TextView(this);
+        textIMCFamilia.setTextSize(30);
+        textIMCFamilia.setTextColor(ContextCompat.getColor(this, R.color.colorPrimary));
+        textIMCFamilia.setText("IMC da Família");
+        textIMCFamilia.setLayoutParams(layoutParamsTitulo);
+        listagem_layout.addView(textIMCFamilia);
+        for (Map.Entry<String, String> entry : todasPessoas.entrySet()) {
+            PessoaIMC pessoaIMC = gson.fromJson(entry.getValue().toString(), PessoaIMC.class);
+            TextView textNome = new TextView(this);
+            textNome.setLayoutParams(layoutParamsNome);
+            textNome.setTextSize(20);
+            textNome.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+            textNome.setText(pessoaIMC.nome);
+            listagem_layout.addView(textNome);
+            TextView textPeso = new TextView(this);
+            textPeso.setLayoutParams(layoutParamsDados);
+            textPeso.setTextColor(ContextCompat.getColor(this, R.color.colorAccent));
+            textPeso.setText("peso: "+pessoaIMC.peso);
+            listagem_layout.addView(textPeso);
+            TextView textAltura = new TextView(this);
+            textAltura.setLayoutParams(layoutParamsDados);
+            textAltura.setTextColor(ContextCompat.getColor(this, R.color.colorAccent));
+            textAltura.setText("altura: "+pessoaIMC.altura);
+            listagem_layout.addView(textAltura);
+            TextView textImc = new TextView(this);
+            textImc.setLayoutParams(layoutParamsDados);
+            textImc.setTextColor(ContextCompat.getColor(this, R.color.colorAccent));
+            textImc.setText("IMC: "+pessoaIMC.imc);
+            listagem_layout.addView(textImc);
+            TextView textClassificacao = new TextView(this);
+            textClassificacao.setLayoutParams(layoutParamsDados);
+            textClassificacao.setTextColor(ContextCompat.getColor(this, R.color.colorAccent));
+            textClassificacao.setText("classificação: "+pessoaIMC.classificacao);
+            listagem_layout.addView(textClassificacao);
+        }
+    }
+}
+					</code></pre>					
+				</section>								
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
