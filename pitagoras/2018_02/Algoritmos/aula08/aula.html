@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Algoritmos e Técnicas de Programação</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/moon.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #f16625"><b>Algoritmos e Técnicas de Programação</b></font><br><br>
+					<center><img src="img/0.png" style="all:unset;width: 40%"></center>
+					<span><font size="6" color="#a4dadd"><b>Aula 08</b></font></span><br>
+					<span><font size="4" color="#a4dadd">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4" color="#a4dadd">raulcezar@gmail.com</font>
+				</section>						
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<font size="5">
+					<b>04: </b>A empresa de software XPTO deseja calcular quanto ela vai gastar com sua folha de pagamento este mês. Para auxiliar o pessoal do RH a fazer este cálculo, você deve construir um programa que, dado o número de funcionários da empresa, fornecido pelo usuário do RH, o programa deve requisitar a ele o cargo e o número de horas extras de cada funcionário. O cálculo do salário é dado de acordo com a tabela abaixo:<br>
+					<table>
+						<tr><td><b>Cargo</b></td><td><b>Salário Base</b></td><td><b>% hora extra</b></td></tr>
+						<tr><td>1- Programado Junior</td><td>R$ 1.500,00</td><td>1%</td></tr>
+						<tr><td>2- Programado Sênior</td><td>R$ 2.000,00</td><td>2%</td></tr>
+						<tr><td>3- Analista de TI</td><td>R$ 2.500,00</td><td>3%</td></tr>
+						<tr><td>4- Arquiteto de Software</td><td>R$ 3.000,00</td><td>4%</td></tr>
+					</table>
+					Após todo o processamento, a saída do programa deve informar ao usuário do RH, o gasto total com a folha de pagamento deste mês. 
+					</font>
+				</section>				
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<font size="5">
+					<b>05: </b>A mesma empresa de software XPTO, agora necessita de uma nova funcionalidade. Ela deseja um programa que, dado o numero de funcionários da empresa, fornecido pelo usuário do RH, o programa requisite o cargo e quanto foi o salario bruto (salario total de cada mês já considerando a soma do salário base com horas extras) de cada funcionário em cada um dos meses do ano (1-janeiro, 2-fevereiro,...,12-dezembro).Após todo o processamento, a saída do programa deve informar ao usuário do RH, a média de salário mensal por cargo (Programador Junior, Programador Sênior, Analista de TI e Arquiteto de Software).
+					</font>
+				</section>
+				<section>
+					<h3><b>Estruturas de Repetição ENQUANTO (Portugol)</b></h3>
+					<ul>
+						<li>Essa estrutura de repetição é utilizada quando não se sabe o número de vezes que um trecho do algoritmo deve ser repetido, embora também possa ser utilizada quando se conhece este número.</li>
+					</ul><br>
+					<img src="img/1.png" style="all:unset;width:100%">
+				</section>					
+				<section>
+					<h3><b>Estruturas de Repetição ENQUANTO (Portugol)</b></h3>
+					<ul>
+						<li>Essa estrutura baseia-se na análise de uma condição. A repetição será feita enquanto a condição for verdadeira.</li>
+						<li>Existem situações em que o teste condicional da estrutura de repetição, que fica no início, resulta em um valor falso. Nesses casos, os comandos de dentro da estrutura de repetição não serão executados.</li>
+					</ul><br>
+					<img src="img/1.png" style="all:unset;width:50%">
+				</section>					
+				<section>
+					<h3><b>Estruturas de Repetição ENQUANTO (Portugol)</b></h3>
+					<ul>
+						<li>Exemplo</li>
+					</ul><br>
+					<img src="img/2.png" style="all:unset;width:100%">
+				</section>					
+				<section>
+					<h3><b>Estruturas de Repetição ENQUANTO (C)</b></h3>
+					<img src="img/3.png" style="all:unset;width:60%">
+				</section>					
+				<section>
+					<h3><b>Estruturas de Repetição ENQUANTO (C)</b></h3>
+					Exemplo
+					<img src="img/4.png" style="all:unset;width:100%">
+				</section>					
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<ul>
+						<li><b>01: </b>Programa que lê números do teclado até que um número zero seja digitado. O programa deve calcular a soma desses valores e imprime-la na tela no final.</li>
+					</ul>
+				</section>					
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<ul>
+						<li><b>02: </b>Programa que lê números do teclado até que um número zero seja digitado. O programa deve retornar a quantidade de números positivos e negativos que foram digitados.</li>
+					</ul>
+				</section>					
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<ul>
+						<li><b>03: </b>Programa que lê N números, e ao final mostra a média.</li>
+					</ul>
+				</section>				
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<ul>
+						<li><font size="6"><b>04: </b>Faça um programa que receba o 13º salário de um funcionário chamado Carlos. Sabe-se que outro funcionário, João, tem salário equivalente a um terço do salário de Carlos. Ambos aplicarão o 13º em fundos de investimento. Carlos aplicará em Poupança que rende 2% ao mês, enquanto João em Renda Fixa a 5% ao mês. O programa deve calcular quantos meses levará para o investimento de João se igualar ou ultrapassar o de Carlos e quanto cada um possuirá na conta.</font></li>
+					</ul><br>
+					<img src="img/5.png" style="all:unset;width:60%">
+				</section>									
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<ul>
+						<li><b>05: </b>Faça um programa que requisite a entrada de dois valores, M e N, repetidas vezes enquanto M <= N utilizando a estrutura ENQUANTO (while). A cada fez que ele entrar no laço, faça o somatório dos valores de M a N utilizando outro laço com a estrutura PARA (for) e imprima o resultado.</li>
+					</ul><br>
+					<img src="img/7.png" style="all:unset;width:35%">
+				</section>			
+				<section>
+					<h3><b>fim!</b></h3>
+				</section>							
+				<section>
+					<h3><b>Solução 04</b></h3>
+					<img src="img/6.png" style="all:unset;width:70%">
+				</section>							
+				<section>
+					<h3><b>Solução 05</b></h3>
+					<img src="img/8.png" style="all:unset;width:100%">
+				</section>						
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

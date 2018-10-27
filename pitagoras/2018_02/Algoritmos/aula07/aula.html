@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Algoritmos e Técnicas de Programação</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/moon.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #f16625"><b>Algoritmos e Técnicas de Programação</b></font><br><br>
+					<center><img src="img/0.png" style="all:unset;width: 40%"></center>
+					<span><font size="6" color="#a4dadd"><b>Aula 07</b></font></span><br>
+					<span><font size="4" color="#a4dadd">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4" color="#a4dadd">raulcezar@gmail.com</font>
+				</section>
+				<section>
+					<h3><b>Estruturas de Repetição</b></h3>
+					<ul>
+						<li>Utilizada quando um trecho do algoritmo ou até mesmo o algoritmo inteiro precisa ser repetido.</li>
+						<li>O número de repetições pode ser fixo ou atrelado à uma condição. Assim, existem estruturas específicas para tais repetições.</li>
+					</ul><br>
+					<img src="img/1.png" style="all:unset;width: 30%">
+				</section>
+				<section>
+					<h3><b>Estruturas de Repetição</b></h3>
+					<ul>
+						<li><b>Estrutura Repita...Para:</b> estrutura de repetição para um número definido de repetições.</li>
+						<li><b>Estrutura Enquanto:</b> estrutura de repetição para número indefinido de repetições.</li>
+						<li><b>Estrutura Repita...Enquanto:</b> estrutura de repetição para um número indefinido de repetições e validação no final.</li>
+					</ul>
+				</section>				
+				<section>
+					<h3><b>Estruturas de Repetição PARA (Portugol)</b></h3>
+					<ul>
+						<li>O <b>comando1</b> e o <b>comando2</b> serão executados utilizando a variável <i>i</i> como controle, e seu conteúdo vai variar do valor <i>inicial</i> até o valor <i>final</i>.</li>
+					</ul><br>
+					<img src="img/2.png" style="all:unset;width:100%">
+				</section>					
+				<section>
+					<h3><b>Estruturas de Repetição PARA (Portugol)</b></h3>
+					<ul>
+						<li>É utilizado principalmente quando se sabe o número de vezes que um trecho do algoritmo deve ser repetido.</li>
+					</ul>Exemplo 1: <br>
+					<img src="img/3.png" style="all:unset;width:70%">
+				</section>					
+				<section>
+					<h3><b>Estruturas de Repetição PARA (Portugol)</b></h3>
+					<ul>
+						<li>É utilizado principalmente quando se sabe o número de vezes que um trecho do algoritmo deve ser repetido.</li>
+					</ul>Exemplo 2: <br>
+					<img src="img/4.png" style="all:unset;width:85%">
+				</section>					
+				<section>
+					<h3><b>Estruturas de Repetição PARA (C)</b></h3>
+					<img src="img/6.png" style="all:unset;width:100%">
+				</section>					
+				<section>
+					<h3><b>Estruturas de Repetição PARA (C)</b></h3>
+					<img src="img/7.png" style="all:unset;width:100%">
+				</section>						
+				<section>
+					<h3><b>Estruturas de Repetição PARA (C)</b></h3>
+					<img src="img/6.png" style="all:unset;width:100%">
+					Qual a saída?
+				</section>						
+				<section>
+					<h3><b>Estruturas de Repetição PARA (C)</b></h3>
+					<img src="img/8.png" style="all:unset;width:100%">
+					Qual a saída?
+				</section>						
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<ul>
+						<li><b>01: </b>Programa que imprime somente os números pares entre 0 e 20, em ordem crescente.</li>
+					</ul>
+				</section>					
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<ul>
+						<li><b>02: </b>Programa que imprime somente os números ímpares entre 0 e 10, em ordem decrescente.</li>
+					</ul>
+				</section>					
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<ul>
+						<li><b>03: </b>Programa que lê um valor N e imprime seu fatorial. Sabe-se que:</li>
+						<li>n! = n x (n-1) x (n-2) x ... x (n-(n-1))</li>
+						<li>Por exemplo 4!</li>
+						<li>4!=  4  x (4-1) x (4-2) x (4-3)</li>
+						<li>4!=  4  x   3   x   2   x   1  </li>
+						<li>4!=  1  x   2   x   3   x   4  </li>
+						<li>4!= 24</li>
+					</ul>
+				</section>				
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<ul>
+						<li><b>04: </b>Programa que lê o valor de uma conta e número de parcelas, imprimindo o valor de cada parcela com juros e o total final. Sabe-se que a cada parcela, é acrescido 1% de juro, por exemplo:</li>
+					</ul><br>
+					<img src="img/9.png" style="all:unset;width:80%">
+				</section>				
+				<section>
+					<h3><b>fim!</b></h3>
+				</section>							
+				<section>
+					<h3><b>Solução 03</b></h3>
+					<img src="img/10.png" style="all:unset;width:70%">
+				</section>							
+				<section>
+					<h3><b>Solução 04</b></h3>
+					<img src="img/11.png" style="all:unset;width:100%">
+				</section>						
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

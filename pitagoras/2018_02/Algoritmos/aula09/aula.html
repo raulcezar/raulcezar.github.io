@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Algoritmos e Técnicas de Programação</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/moon.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #f16625"><b>Algoritmos e Técnicas de Programação</b></font><br><br>
+					<center><img src="img/0.png" style="all:unset;width: 40%"></center>
+					<span><font size="6" color="#a4dadd"><b>Aula 09</b></font></span><br>
+					<span><font size="4" color="#a4dadd">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4" color="#a4dadd">raulcezar@gmail.com</font>
+				</section>
+				<section>
+					<h3><b>Estruturas de Repetição REPITA...ENQUANTO (Portugol)</b></h3>
+					<img src="img/1.png" style="all:unset;width:100%">
+				</section>					
+				<section>
+					<h3><b>Estruturas de Repetição REPITA...ENQUANTO (Portugol)</b></h3>
+					<ul>
+						<li>Essa estrutura de repetição é semelhante a Estrutura Enquanto, o trecho de instruções será executado enquanto a condição for verdadeira, porém nessa estrutura o trecho será executado pelo menos uma vez, antes da condição ser avaliada, pois a avaliação da condição é feita só no final, diferente do enquanto que é no início.</li>
+					</ul>
+				</section>					
+				<section>
+					<h3><b>Estruturas de Repetição REPITA...ENQUANTO (Portugol)</b></h3>
+					<ul>
+						<li>Exemplo</li>
+					</ul><br>
+					<img src="img/2.png" style="all:unset;width:90%">
+				</section>					
+				<section>
+					<h3><b>Estruturas de Repetição REPITA...ENQUANTO  (C)</b></h3>
+					<img src="img/3.png" style="all:unset;width:60%">
+				</section>					
+				<section>
+					<h3><b>Estruturas de Repetição ENQUANTO (C)</b></h3>
+					Exemplo
+					<img src="img/4.png" style="all:unset;width:100%">
+				</section>					
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<ul>
+						<li><b>01: </b>Leia números do teclado até que o número zero seja lido. Determine e imprima o maior dos números lidos.</li>
+					</ul>
+				</section>					
+				<section>
+					<h3><b>Exercícios</b></h3>
+					<ul>
+						<li><b>02: </b>Leia números do teclado até que o número zero seja lido. Determine e imprima a média aritmética dos números lidos. OBS: O Zero não entra no cálculo da média.</li>
+					</ul>
+				</section>					
+				<section>
+					<h3><b>Exercícios</b></h3>
+						<font size="5"><b>03: </b>Faça um programa que leia o código dos itens pedidos e as quantidades desejadas. Calcule o valor a ser pago por item (qtde x preço) acumulando o valor total a ser mostrado no final. A cada repetição, mostre o menu e verifique se o usuário quer pedir mais algum item, caso contrário, o algoritmo pode parar e mostrar o total.<br>
+						<table>
+						   <tr><td><b>código</b></td><td><b>produto</b></td><td><b>preço</b></td></tr>
+						   <tr><td>100</td><td>cachorro-quente</td><td>R$ 1,20</td></tr>
+						   <tr><td>101</td><td>bauru simples</td><td>R$ 1,30</td></tr>
+						   <tr><td>102</td><td>bauru com ovo</td><td>R$ 1,50</td></tr>
+						   <tr><td>103</td><td>hamburguer</td><td>R$ 1,20</td></tr>
+						   <tr><td>104</td><td>cheeseburguer</td><td>R$ 1,30</td></tr>
+						   <tr><td>105</td><td>refrigerante</td><td>R$ 1,00</td></tr>
+						</table>
+						</font>
+				</section>										
+				<section>
+					<h3><b>fim!</b></h3>
+				</section>							
+				<section>
+					<h3><b>Solução 03</b></h3>
+					<img src="img/5.png" style="all:unset;width:34%">
+				</section>						
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
