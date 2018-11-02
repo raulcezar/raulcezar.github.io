@@ -1,0 +1,412 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Desenvolvimento para Dispositivos Móveis</title>
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/reveal.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/css/theme/simple.css">
+		<link rel="stylesheet" href="../../../reveal.js-3.7.0/lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../../reveal.js-3.7.0/css/print/pdf.css' : '../../../reveal.js-3.7.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<font size="7" style="color: #a7c73f"><b>Desenvolvimento para Dispositivos Móveis</b></font>
+					<center><img src="img/1.png" style="all:unset;"></center>
+					<span><font size="6"><b>Aula 07</b></font></span><br>
+					<span><font size="4">Prof. Dr. <b>Raul</b>cézar Alves</font></span><br>
+					<font size="4">raulcezar@gmail.com</font>
+				</section>				
+				<section>
+					<h3><b>Projeto UatZap</b></h3>
+					<ul>
+						<li>Chat de texto para usuários cadastrados no App.</li>
+						<li>Utilizar Firebase para autenticar e armazenar mensagens.</li>
+					</ul>
+				</section>		
+				<section>
+					<h3><b>Projeto UatZap</b></h3>
+					<img src="img/2.png" style="all:unset;width:100%">
+				</section>		
+				<section>
+					<h3><b>Projeto UatZap</b></h3>
+					<img src="img/3.png" style="all:unset;width:100%">
+				</section>								
+				<section>
+					<h3><b>Modificações activity_main.xml</b></h3>					
+					<img src="img/4.png" style="all:unset;width:80%">
+				</section>									
+				<section>
+					<h3><b>Modificações activity_main.xml</b></h3>					
+					<pre>
+						<code>
+&#x3C;?xml version=&#x22;1.0&#x22; encoding=&#x22;utf-8&#x22;?&#x3E;
+&#x3C;LinearLayout xmlns:android=&#x22;http://schemas.android.com/apk/res/android&#x22;
+    xmlns:tools=&#x22;http://schemas.android.com/tools&#x22;
+    android:layout_width=&#x22;match_parent&#x22;
+    android:layout_height=&#x22;match_parent&#x22;
+    xmlns:app=&#x22;http://schemas.android.com/apk/res-auto&#x22;
+    android:orientation=&#x22;vertical&#x22;
+    tools:context=&#x22;.MainActivity&#x22;&#x3E;
+     &#x3C;android.support.design.widget.AppBarLayout
+        android:layout_width=&#x22;match_parent&#x22;
+        android:layout_height=&#x22;wrap_content&#x22;
+        android:theme=&#x22;@style/AppTheme.AppBarOverlay&#x22;&#x3E;
+        &#x3C;android.support.v7.widget.Toolbar
+            android:id=&#x22;@+id/toolbar&#x22;
+            android:layout_width=&#x22;match_parent&#x22;
+            android:layout_height=&#x22;?attr/actionBarSize&#x22;
+            android:background=&#x22;?attr/colorPrimary&#x22;
+            app:popupTheme=&#x22;@style/AppTheme.PopupOverlay&#x22; /&#x3E;
+    &#x3C;/android.support.design.widget.AppBarLayout&#x3E;
+    &#x3C;!-- ADD--&#x3E;
+    &#x3C;ListView
+        android:id=&#x22;@+id/listViewMsg&#x22;
+        android:layout_width=&#x22;wrap_content&#x22;
+        android:layout_height=&#x22;wrap_content&#x22;
+        /&#x3E;
+    &#x3C;TextView
+        android:text=&#x22;Mensagem&#x22;
+        android:layout_width=&#x22;wrap_content&#x22;
+        android:layout_height=&#x22;wrap_content&#x22; /&#x3E;
+    &#x3C;EditText
+        android:id=&#x22;@+id/msg&#x22;
+        android:layout_width=&#x22;wrap_content&#x22;
+        android:layout_height=&#x22;wrap_content&#x22; /&#x3E;
+    &#x3C;Button
+        android:id=&#x22;@+id/enviar&#x22;
+        android:text=&#x22;enviar&#x22;
+        android:onClick=&#x22;enviarMsg&#x22;
+        android:layout_width=&#x22;wrap_content&#x22;
+        android:layout_height=&#x22;wrap_content&#x22; /&#x3E;
+    &#x3C;include layout=&#x22;@layout/content_main&#x22; /&#x3E;
+
+   &#x3C;/LinearLayout&#x3E;
+						</code>
+					</pre>
+				</section>								
+				<section>
+					<h3><b>ListView</b></h3>	
+					<ul>
+						<li>A <b>ListView</b> é um grupo de exibições que exibe uma lista de itens roláveis.</li>
+						<li>Os itens da lista são inseridos automaticamente na lista usando um <b>Adapter</b> que obtém conteúdo de uma origem como uma matriz ou consulta de banco de dados e converte cada resultado de item em uma exibição, que é colocada na lista.</li>
+						<li>Existem vários tipos de ListViews, cada uma serve para uma situação diferente e para resolver problemas diversos em seus aplicativos.</li>
+					</ul>					 	
+				</section>								
+				<section>
+					<h3><b>ListView</b></h3>	
+					<ul>
+						<li>A memória de dispositivos móveis é fixa e extremamente limitada.</li>
+						<li>É utilizada para armazenar diversos tipos de dados: textos, fotos, vídeos, audios, etc.</li>
+						<li>Além disso, é compartilhada por todos os aplicativos do seu dispositivo, inclusive o próprio SO (Android).</li>
+					</ul>												
+					<img src="img/5.png" style="all:unset;width:40%">			 	
+				</section>							
+				<section>
+					<h3><b>ListView</b></h3>	
+					<ul>
+						<li>Apps devem fazer uso inteligente de memória, caso contrário eles podem travar sua execução e também a de outros.</li>
+						<li>Imagine um App que mostra todos os seus contatos de uma vez, por exemplo 1.000. Seria necessário 1.000 TextView na tela ocupando memória, sendo que conseguiriamos ver apenas 10.
+						</li>
+					</ul>												
+					<img src="img/6.png" style="all:unset;width:22%">			 	
+				</section>							
+				<section>
+					<h3><b>ListView</b></h3>	
+					<ul>
+						<li>Uma estratégia é <b>reciclagem de Views</b>.</li>
+						<li>Podemos criar apenas a quantidade de Views que conseguimos ver na tela, e a medida em que rolamos a lista, dados que não podem mais ser vistos são removidos das Views para dar espaço aos novos.</li>
+					</ul>												
+					<img src="img/7.png" style="all:unset;width:30%">			 	
+				</section>							
+				<section>
+					<h3><b>ListView</b></h3>	
+					<ul>
+						<li>Para utilizar essa estratégia e exibir listas de maneira eficiente, utilizamos algum tipo de <b>ListView</b> (tela) juntamente com um <b>Adapter</b> (java).</li>
+						<li><b>Adapter</b> é responsável por gerenciar e adaptar os dados nas Views, e até criá-las se necessário.</li>
+						<li>Existem vários tipos de <b>Adapter</b>, um dos mais utilizados é o <b>ArrayAdapter</b> que pode manipular dados com base em Arrays ou java.util.List.</li>
+					</ul>														 	
+				</section>							
+				<section>
+					<h3><b>ListView</b></h3>	
+					<ul>Existem dois métodos importantes nos <b>Adapters</b> para fazer a atualização dos dados e avisar as <b>ListViews</b> da tela que algo mudou:
+						<li><b>notifyDataSetChanged()</b>: É chamado se os dados tiverem sido alterados ou se houver novos dados disponíveis.</li>
+						<li><b>notifyDataSetInvalidated()</b>: É chamado se os dados não estiverem mais disponíveis.</li>
+					</ul>														 	
+				</section>					
+				<section>		
+					<h3><b>ListView</b></h3>	
+					<ul>
+						<li>A ListView é um dos componentes mais utilizados para listar dados na plataforma Android de forma eficiente.</li>
+						<li>Basicamente ela organiza os dados um seguido do outro em formato vertical com a opção de rolagem.</li>
+						<li>Para utilizar a ListView, primeiro deve-se adicionar o componente no XML da activity (tela).</li>
+					</ul>		
+					<img src="img/8.png" style="all:unset;width:100%">								 	
+				</section>					
+				<section>		
+					<h3><b>ListView</b></h3>	
+					<ul>
+						<li>Depois, no controle Java da activity, no método onCreate(), deve-se recuperar o componente pelo ID para utilizá-lo mais tarde, de preferência utilizando o padrão ViewHolder que vimos.</li>
+					</ul>		
+					<img src="img/9.png" style="all:unset;width:100%">								 	
+				</section>				
+				<section>		
+					<h3><b>ListView</b></h3>	
+					<ul>
+						<li>Os dados a serem apresentados na ListView podem estar armazenados em um Array, como mostrado abaixo, ou em um Java List.</li>
+						<li>Estes dados podem ser estáticos, ou terem vindo por exemplo de uma Base de dados dinamicamente.</li>
+					</ul>		
+					<img src="img/10.png" style="all:unset;width:100%">								 	
+				</section>				
+				<section>		
+					<h3><b>ListView</b></h3>	
+					<ul>
+						<li>É necessário instanciar um <b>ArrayAdapter</b> tipando ele com dados do tipo String neste caso.</li>
+						<li>No construtor, passe os seguintes parâmetros: Context, ID do layout e a Array de dados.</li>
+						<li>No exemplo, é utilizado o layout android.R.layout.simple_list_item_1, padrão para a linha da ListView.</li>
+						<li>Depois, o Adapter é adicionado dentro da ListView utilizando o método setAdapter().</li>
+					</ul>		
+					<img src="img/11.png" style="all:unset;width:100%">								 	
+				</section>				
+				<section>		
+					<h3><b>ListView</b></h3>	
+					<ul>Resumindo:
+						<li>dizemos que a <b>ListView</b> da tela (@+id/listview)</li>
+					     <li>é ligada ao atributo <b>listview</b> no Java</li>
+					     <li>gerenciado pelo adaptador <b>adapter</b></li>
+					     <li>que administra os dados a serem exibidos do vetor <b>dados</b>.</li>
+					</ul>									 	
+				</section>													
+				<section>
+					<h3><b>Modificações MainActivity.java</b></h3>					
+					<img src="img/12.png" style="all:unset;width:100%">
+				</section>													
+				<section>
+					<h3><b>Modificações MainActivity.java</b></h3>					
+					<img src="img/13.png" style="all:unset;width:100%">
+				</section>													
+				<section>
+					<h3><b>Modificações MainActivity.java</b></h3>					
+					<img src="img/14.png" style="all:unset;width:100%">
+				</section>									
+				<section>
+					<h3><b>Modificações activity_main.xml</b></h3>					
+					<pre>
+						<code>	
+package mobile.pitagoras.uatzap;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+public class MainActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
+    private DatabaseReference dbr;//ADD
+    private ViewHolder vh = new ViewHolder();//ADD
+    private ArrayList&#x3C;String&#x3E; listMsg = new ArrayList&#x3C;String&#x3E;();//ADD
+    private ArrayAdapter arrayAdpt;//ADD
+    private FirebaseUser user;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
+        if (user != null) {
+            Toast.makeText(getApplicationContext(), &#x22;Bem vindo de volta &#x22; + user.getEmail() + &#x22;!&#x22;, Toast.LENGTH_LONG).show();
+        } else {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        this.vh.msg = (EditText) findViewById(R.id.msg);//ADD
+        this.vh.listViewMsg = (ListView) findViewById(R.id.listViewMsg);//ADD
+        arrayAdpt = new ArrayAdapter(this,android.R.layout.simple_list_item_1,listMsg);//ADD
+        this.vh.listViewMsg.setAdapter(this.arrayAdpt);//ADD
+        dbr = FirebaseDatabase.getInstance().getReference().getRoot();//ADD
+        dbr.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Set&#x3C;String&#x3E; set =  new HashSet&#x3C;String&#x3E;();
+                for(DataSnapshot ds : dataSnapshot.getChildren()) {
+                    ds.getValue();
+                    set.add(ds.getValue().toString());
+                }
+                arrayAdpt.clear();
+                arrayAdpt.addAll(set);
+                arrayAdpt.notifyDataSetChanged();
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_exit) {
+            mAuth.signOut();
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    public void enviarMsg(View view) {
+        android.text.format.DateFormat df = new android.text.format.DateFormat();
+        String data = df.format(&#x22;dd/MM/yyyy hh:mm&#x22;, new java.util.Date()).toString();
+        String valor = user.getEmail()+&#x22;: \n&#x22;+this.vh.msg.getText().toString()+&#x22; \n&#x22;+data;
+        String chave = dbr.push().getKey();
+        dbr.child(chave).setValue(valor);
+    }
+
+    private class ViewHolder{//ADD
+        ListView listViewMsg;
+        EditText msg;
+    }
+
+}
+
+						</code>
+					</pre>	
+				</section>													
+				<section>
+					<h3><b>UatZap</b></h3>					
+					<img src="img/15.png" style="all:unset;width:100%">
+				</section>	
+				<section>
+					<h3><b>Verifique permissão de internet no AndroidManifest.xml</b></h3>				
+					<pre>
+						<code>	
+&#x3C;?xml version=&#x22;1.0&#x22; encoding=&#x22;utf-8&#x22;?&#x3E;
+&#x3C;manifest xmlns:android=&#x22;http://schemas.android.com/apk/res/android&#x22; package=&#x22;mobile.pitagoras.uatzap&#x22;&#x3E;
+    &#x3C;uses-permission android:name=&#x22;android.permission.GET_ACCOUNTS&#x22; /&#x3E;
+    &#x3C;uses-permission android:name=&#x22;android.permission.READ_PROFILE&#x22; /&#x3E;
+    &#x3C;uses-permission android:name=&#x22;android.permission.READ_CONTACTS&#x22; /&#x3E;
+    &#x3C;uses-permission android:name=&#x22;android.permission.INTERNET&#x22; /&#x3E;&#x3C;!-- ADD--&#x3E;
+    &#x3C;application
+        android:allowBackup=&#x22;true&#x22;
+        android:icon=&#x22;@mipmap/ic_launcher&#x22;
+        android:label=&#x22;@string/app_name&#x22;
+        android:roundIcon=&#x22;@mipmap/ic_launcher_round&#x22;
+        android:supportsRtl=&#x22;true&#x22;
+        android:theme=&#x22;@style/AppTheme&#x22;&#x3E;
+        &#x3C;activity
+            android:name=&#x22;.LoginActivity&#x22;
+            android:label=&#x22;@string/app_name&#x22;&#x3E;
+            &#x3C;intent-filter&#x3E;
+                &#x3C;action android:name=&#x22;android.intent.action.MAIN&#x22; /&#x3E;
+            &#x3C;/intent-filter&#x3E;
+        &#x3C;/activity&#x3E;
+        &#x3C;activity
+            android:name=&#x22;.MainActivity&#x22;
+            android:label=&#x22;@string/title_activity_main&#x22;
+            android:theme=&#x22;@style/AppTheme.NoActionBar&#x22;&#x3E;
+            &#x3C;intent-filter&#x3E;
+                &#x3C;action android:name=&#x22;android.intent.action.MAIN&#x22; /&#x3E;
+                &#x3C;category android:name=&#x22;android.intent.category.LAUNCHER&#x22; /&#x3E;
+            &#x3C;/intent-filter&#x3E;
+        &#x3C;/activity&#x3E;
+    &#x3C;/application&#x3E;
+&#x3C;/manifest&#x3E;
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3><b>Verifique as versões do Firebase (preferência 16.0.4)</b></h3>				
+					<pre>
+						<code>	
+apply plugin: &#x27;com.android.application&#x27;
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId &#x22;mobile.pitagoras.uatzap&#x22;
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName &#x22;1.0&#x22;
+        testInstrumentationRunner &#x22;android.support.test.runner.AndroidJUnitRunner&#x22;
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(&#x27;proguard-android.txt&#x27;), &#x27;proguard-rules.pro&#x27;
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: &#x27;libs&#x27;, include: [&#x27;*.jar&#x27;])
+    //noinspection GradleCompatible
+    implementation &#x27;com.android.support:appcompat-v7:28.0.0&#x27;
+    implementation &#x27;com.android.support:design:28.0.0&#x27;
+    implementation &#x27;com.google.firebase:firebase-auth:16.0.4&#x27;
+    implementation &#x27;com.google.firebase:firebase-core:16.0.4&#x27;
+    implementation &#x27;com.google.firebase:firebase-database:16.0.4&#x27;
+    implementation &#x27;com.android.support.constraint:constraint-layout:1.1.3&#x27;
+    testImplementation &#x27;junit:junit:4.12&#x27;
+    androidTestImplementation &#x27;com.android.support.test:runner:1.0.2&#x27;
+    androidTestImplementation &#x27;com.android.support.test.espresso:espresso-core:3.0.2&#x27;
+}
+
+apply plugin: &#x27;com.google.gms.google-services&#x27;
+
+						</code>
+					</pre>
+				</section>
+			</div>
+		</div>
+		<script src="../../../reveal.js-3.7.0/lib/js/head.min.js"></script>
+		<script src="../../../reveal.js-3.7.0/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls:true,
+				progress:true,
+				history:true,
+				center:true,
+				transition: Reveal.getQueryHash().transition || 'concave',
+				dependencies: [
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/marked.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/markdown/markdown.js' },
+					{ src: '../../../reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+					{ src: '../../../reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
